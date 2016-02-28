@@ -1,5 +1,5 @@
 //
-//  SecondViewController.h
+//  FirstViewController.h
 //  ICloudBook_ios
 //
 //  Created by MasterFan on 16/2/27.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SecondViewController : UIViewController
+@interface ReadViewController : UIViewController
 
 
 @end

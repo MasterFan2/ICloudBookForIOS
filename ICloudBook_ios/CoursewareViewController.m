@@ -6,13 +6,13 @@
 //  Copyright © 2016年 MasterFan. All rights reserved.
 //
 
-#import "SecondViewController.h"
+#import "CoursewareViewController.h"
 
-@interface SecondViewController ()
+@interface CoursewareViewController ()
 
 @end
 
-@implementation SecondViewController
+@implementation CoursewareViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

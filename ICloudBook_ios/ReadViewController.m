@@ -6,13 +6,14 @@
 //  Copyright © 2016年 MasterFan. All rights reserved.
 //
 
-#import "FirstViewController.h"
+#import "ReadViewController.h"
 
-@interface FirstViewController ()
+@interface ReadViewController ()
+@property (weak, nonatomic) IBOutlet UILabel *bigLabel;
 
 @end
 
-@implementation FirstViewController
+@implementation ReadViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

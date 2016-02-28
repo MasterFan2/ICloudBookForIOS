@@ -9,13 +9,18 @@
 /* Begin PBXBuildFile section */
 		E3310A4A1C81FB8900D629F8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E3310A491C81FB8900D629F8 /* main.m */; };
 		E3310A4D1C81FB8900D629F8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E3310A4C1C81FB8900D629F8 /* AppDelegate.m */; };
-		E3310A501C81FB8900D629F8 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3310A4F1C81FB8900D629F8 /* FirstViewController.m */; };
-		E3310A531C81FB8900D629F8 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3310A521C81FB8900D629F8 /* SecondViewController.m */; };
+		E3310A501C81FB8900D629F8 /* ReadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3310A4F1C81FB8900D629F8 /* ReadViewController.m */; };
+		E3310A531C81FB8900D629F8 /* CoursewareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3310A521C81FB8900D629F8 /* CoursewareViewController.m */; };
 		E3310A561C81FB8900D629F8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3310A541C81FB8900D629F8 /* Main.storyboard */; };
 		E3310A581C81FB8900D629F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3310A571C81FB8900D629F8 /* Assets.xcassets */; };
 		E3310A5B1C81FB8900D629F8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3310A591C81FB8900D629F8 /* LaunchScreen.storyboard */; };
 		E3310A661C81FB8900D629F8 /* ICloudBook_iosTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E3310A651C81FB8900D629F8 /* ICloudBook_iosTests.m */; };
 		E3310A711C81FB8900D629F8 /* ICloudBook_iosUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E3310A701C81FB8900D629F8 /* ICloudBook_iosUITests.m */; };
+		E3310A851C8201BA00D629F8 /* ManagementViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3310A841C8201BA00D629F8 /* ManagementViewController.m */; };
+		E3310A881C8201C700D629F8 /* PersonalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3310A871C8201C700D629F8 /* PersonalViewController.m */; };
+		E3C3E95F1C82874200F233AB /* LaunchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3C3E95E1C82874200F233AB /* LaunchViewController.m */; };
+		E3C3E9641C82A5D600F233AB /* PersonalTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E3C3E9621C82A5D600F233AB /* PersonalTableViewCell.m */; };
+		E3C3E9651C82A5D600F233AB /* PersonalTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3C3E9631C82A5D600F233AB /* PersonalTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,10 +45,10 @@
 		E3310A491C81FB8900D629F8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E3310A4B1C81FB8900D629F8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E3310A4C1C81FB8900D629F8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		E3310A4E1C81FB8900D629F8 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
-		E3310A4F1C81FB8900D629F8 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
-		E3310A511C81FB8900D629F8 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		E3310A521C81FB8900D629F8 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		E3310A4E1C81FB8900D629F8 /* ReadViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReadViewController.h; sourceTree = "<group>"; };
+		E3310A4F1C81FB8900D629F8 /* ReadViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReadViewController.m; sourceTree = "<group>"; };
+		E3310A511C81FB8900D629F8 /* CoursewareViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoursewareViewController.h; sourceTree = "<group>"; };
+		E3310A521C81FB8900D629F8 /* CoursewareViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoursewareViewController.m; sourceTree = "<group>"; };
 		E3310A551C81FB8900D629F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E3310A571C81FB8900D629F8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E3310A5A1C81FB8900D629F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -54,6 +59,15 @@
 		E3310A6C1C81FB8900D629F8 /* ICloudBook_iosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ICloudBook_iosUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3310A701C81FB8900D629F8 /* ICloudBook_iosUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ICloudBook_iosUITests.m; sourceTree = "<group>"; };
 		E3310A721C81FB8900D629F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E3310A831C8201BA00D629F8 /* ManagementViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ManagementViewController.h; sourceTree = "<group>"; };
+		E3310A841C8201BA00D629F8 /* ManagementViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ManagementViewController.m; sourceTree = "<group>"; };
+		E3310A861C8201C700D629F8 /* PersonalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonalViewController.h; sourceTree = "<group>"; };
+		E3310A871C8201C700D629F8 /* PersonalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonalViewController.m; sourceTree = "<group>"; };
+		E3C3E95D1C82874200F233AB /* LaunchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LaunchViewController.h; sourceTree = "<group>"; };
+		E3C3E95E1C82874200F233AB /* LaunchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LaunchViewController.m; sourceTree = "<group>"; };
+		E3C3E9611C82A5D600F233AB /* PersonalTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonalTableViewCell.h; sourceTree = "<group>"; };
+		E3C3E9621C82A5D600F233AB /* PersonalTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonalTableViewCell.m; sourceTree = "<group>"; };
+		E3C3E9631C82A5D600F233AB /* PersonalTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PersonalTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,16 +118,10 @@
 		E3310A471C81FB8900D629F8 /* ICloudBook_ios */ = {
 			isa = PBXGroup;
 			children = (
-				E3310A4B1C81FB8900D629F8 /* AppDelegate.h */,
-				E3310A4C1C81FB8900D629F8 /* AppDelegate.m */,
-				E3310A4E1C81FB8900D629F8 /* FirstViewController.h */,
-				E3310A4F1C81FB8900D629F8 /* FirstViewController.m */,
-				E3310A511C81FB8900D629F8 /* SecondViewController.h */,
-				E3310A521C81FB8900D629F8 /* SecondViewController.m */,
-				E3310A541C81FB8900D629F8 /* Main.storyboard */,
+				E3C3E95C1C8286E300F233AB /* Other */,
+				E3C3E95B1C8286CC00F233AB /* Launch */,
+				E3310A7E1C81FD0000D629F8 /* Main */,
 				E3310A571C81FB8900D629F8 /* Assets.xcassets */,
-				E3310A591C81FB8900D629F8 /* LaunchScreen.storyboard */,
-				E3310A5C1C81FB8900D629F8 /* Info.plist */,
 				E3310A481C81FB8900D629F8 /* Supporting Files */,
 			);
 			path = ICloudBook_ios;
@@ -143,6 +151,85 @@
 				E3310A721C81FB8900D629F8 /* Info.plist */,
 			);
 			path = ICloudBook_iosUITests;
+			sourceTree = "<group>";
+		};
+		E3310A7E1C81FD0000D629F8 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				E3310A541C81FB8900D629F8 /* Main.storyboard */,
+				E3310A821C82019A00D629F8 /* Personal */,
+				E3310A811C82019100D629F8 /* Management */,
+				E3310A801C82017A00D629F8 /* Courseware */,
+				E3310A7F1C82016C00D629F8 /* Read */,
+			);
+			name = Main;
+			sourceTree = "<group>";
+		};
+		E3310A7F1C82016C00D629F8 /* Read */ = {
+			isa = PBXGroup;
+			children = (
+				E3310A4E1C81FB8900D629F8 /* ReadViewController.h */,
+				E3310A4F1C81FB8900D629F8 /* ReadViewController.m */,
+			);
+			name = Read;
+			sourceTree = "<group>";
+		};
+		E3310A801C82017A00D629F8 /* Courseware */ = {
+			isa = PBXGroup;
+			children = (
+				E3310A511C81FB8900D629F8 /* CoursewareViewController.h */,
+				E3310A521C81FB8900D629F8 /* CoursewareViewController.m */,
+			);
+			name = Courseware;
+			sourceTree = "<group>";
+		};
+		E3310A811C82019100D629F8 /* Management */ = {
+			isa = PBXGroup;
+			children = (
+				E3310A831C8201BA00D629F8 /* ManagementViewController.h */,
+				E3310A841C8201BA00D629F8 /* ManagementViewController.m */,
+			);
+			name = Management;
+			sourceTree = "<group>";
+		};
+		E3310A821C82019A00D629F8 /* Personal */ = {
+			isa = PBXGroup;
+			children = (
+				E3C3E9601C82A5AD00F233AB /* custom */,
+				E3310A861C8201C700D629F8 /* PersonalViewController.h */,
+				E3310A871C8201C700D629F8 /* PersonalViewController.m */,
+			);
+			name = Personal;
+			sourceTree = "<group>";
+		};
+		E3C3E95B1C8286CC00F233AB /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+				E3310A591C81FB8900D629F8 /* LaunchScreen.storyboard */,
+				E3C3E95D1C82874200F233AB /* LaunchViewController.h */,
+				E3C3E95E1C82874200F233AB /* LaunchViewController.m */,
+			);
+			name = Launch;
+			sourceTree = "<group>";
+		};
+		E3C3E95C1C8286E300F233AB /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				E3310A4B1C81FB8900D629F8 /* AppDelegate.h */,
+				E3310A4C1C81FB8900D629F8 /* AppDelegate.m */,
+				E3310A5C1C81FB8900D629F8 /* Info.plist */,
+			);
+			name = Other;
+			sourceTree = "<group>";
+		};
+		E3C3E9601C82A5AD00F233AB /* custom */ = {
+			isa = PBXGroup;
+			children = (
+				E3C3E9611C82A5D600F233AB /* PersonalTableViewCell.h */,
+				E3C3E9621C82A5D600F233AB /* PersonalTableViewCell.m */,
+				E3C3E9631C82A5D600F233AB /* PersonalTableViewCell.xib */,
+			);
+			name = custom;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -252,6 +339,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E3310A5B1C81FB8900D629F8 /* LaunchScreen.storyboard in Resources */,
+				E3C3E9651C82A5D600F233AB /* PersonalTableViewCell.xib in Resources */,
 				E3310A581C81FB8900D629F8 /* Assets.xcassets in Resources */,
 				E3310A561C81FB8900D629F8 /* Main.storyboard in Resources */,
 			);
@@ -278,9 +366,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E3310A531C81FB8900D629F8 /* SecondViewController.m in Sources */,
+				E3310A881C8201C700D629F8 /* PersonalViewController.m in Sources */,
+				E3C3E9641C82A5D600F233AB /* PersonalTableViewCell.m in Sources */,
+				E3310A531C81FB8900D629F8 /* CoursewareViewController.m in Sources */,
 				E3310A4D1C81FB8900D629F8 /* AppDelegate.m in Sources */,
-				E3310A501C81FB8900D629F8 /* FirstViewController.m in Sources */,
+				E3C3E95F1C82874200F233AB /* LaunchViewController.m in Sources */,
+				E3310A501C81FB8900D629F8 /* ReadViewController.m in Sources */,
+				E3310A851C8201BA00D629F8 /* ManagementViewController.m in Sources */,
 				E3310A4A1C81FB8900D629F8 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -507,6 +599,7 @@
 				E3310A771C81FB8900D629F8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E3310A781C81FB8900D629F8 /* Build configuration list for PBXNativeTarget "ICloudBook_iosTests" */ = {
 			isa = XCConfigurationList;
@@ -515,6 +608,7 @@
 				E3310A7A1C81FB8900D629F8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E3310A7B1C81FB8900D629F8 /* Build configuration list for PBXNativeTarget "ICloudBook_iosUITests" */ = {
 			isa = XCConfigurationList;
@@ -523,6 +617,7 @@
 				E3310A7D1C81FB8900D629F8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

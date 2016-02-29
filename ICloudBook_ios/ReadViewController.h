@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ReadCollectionViewCell.h"
 
-@interface ReadViewController : UIViewController
+@interface ReadViewController : UIViewController<UICollectionViewDataSource, UICollectionViewDelegate>
 
 
 @end

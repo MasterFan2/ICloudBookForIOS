@@ -6,9 +6,9 @@
 //  Copyright © 2016年 MasterFan. All rights reserved.
 //
 
-#import "ReadCollectionViewCell.h"
+#import "MTFCollectionViewCell.h"
 
-@implementation ReadCollectionViewCell
+@implementation MTFCollectionViewCell
 
 - (void)awakeFromNib {
     // Initialization code

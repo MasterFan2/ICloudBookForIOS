@@ -7,9 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MTFCollectionViewCell.h"
 
-@interface CoursewareViewController : UIViewController
+@interface CoursewareViewController : UIViewController<UICollectionViewDataSource, UICollectionViewDelegate>
+@property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 
+@property (retain, nonatomic) NSArray * listCourseware;
 
 @end
 

@@ -22,7 +22,8 @@
     // Do any additional setup after loading the view.
     _personTable.dataSource = self;
     _personTable.delegate   = self;
-    [_personTable registerNib:[UINib nibWithNibName:@"PersonalTableViewCell" bundle:nil] forCellReuseIdentifier:@"identifier_personal"];
+//    [_personTable registerNib:[UINib nibWithNibName:@"PersonalTableViewCell" bundle:nil] forCellReuseIdentifier:@"identifier_personal"];
+    _personTable.tableHeaderView = self.personHeaderView;
     
     _personTable.tableFooterView = [[UIView alloc] init];//去除多余的分隔线
     
@@ -57,23 +58,26 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString * tableIdentifier = @"identifier_personal";
-    PersonalTableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:tableIdentifier];
-//    if (cell == nil) {
-//        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:tableIdentifier];
-//    }
+    UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:tableIdentifier];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:tableIdentifier];
+    }
+    
+    cell.textLabel.text  = [listData objectAtIndex: [indexPath row]];
+    cell.imageView.image = [UIImage imageNamed:[images objectAtIndex:[indexPath row]]];
     
     //bind data
 //    cell.imageView.image = [UIImage imageNamed:[images objectAtIndex:[indexPath row]]];
 //    cell.textLabel.text  = [listData objectAtIndex: [indexPath row]];
-    cell.headImg.image     = [UIImage imageNamed:[images objectAtIndex:[indexPath row]]];
-    cell.contentLabel.text = [listData objectAtIndex: [indexPath row]];
+//    cell.headImg.image     = [UIImage imageNamed:[images objectAtIndex:[indexPath row]]];
+//    cell.contentLabel.text = [listData objectAtIndex: [indexPath row]];
     
     //return
     return cell;
 }
 
 -(CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 60;
+    return 50;
 }
 
 @end

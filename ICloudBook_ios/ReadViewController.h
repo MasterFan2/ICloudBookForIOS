@@ -7,10 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "ReadCollectionViewCell.h"
+#import "MTFCollectionViewCell.h"
 
 @interface ReadViewController : UIViewController<UICollectionViewDataSource, UICollectionViewDelegate>
+@property (weak, nonatomic) IBOutlet UINavigationBar *myNavigator;
 
+@property (retain, nonatomic) NSArray * listBook;
 
 @end
 

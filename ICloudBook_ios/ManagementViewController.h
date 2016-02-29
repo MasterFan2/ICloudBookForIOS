@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ManagementViewController : UIViewController
+@interface ManagementViewController : UIViewController<UITableViewDataSource, UITableViewDelegate>
+@property (weak, nonatomic) IBOutlet UITableView *myTableView;
+
+@property (retain, nonatomic) NSArray * images;
+@property (retain, nonatomic) NSArray * listData;
 
 @end

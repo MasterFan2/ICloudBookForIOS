@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ReadCollectionViewCell : UICollectionViewCell
+@interface MTFCollectionViewCell : UICollectionViewCell
 @property (weak, nonatomic) IBOutlet UIImageView *collectionViewCellImg;
+
 @property (weak, nonatomic) IBOutlet UILabel *collectionViewCellLabel;
+
 
 @end

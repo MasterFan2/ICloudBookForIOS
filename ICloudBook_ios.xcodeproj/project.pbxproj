@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		AFC163D11C8441D9002E4F3B /* MTFCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AFC163CF1C8441D9002E4F3B /* MTFCollectionViewCell.m */; };
 		AFC163D21C8441D9002E4F3B /* MTFCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFC163D01C8441D9002E4F3B /* MTFCollectionViewCell.xib */; };
+		AFC163D71C85948E002E4F3B /* SigninViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFC163D51C85948E002E4F3B /* SigninViewController.m */; };
+		AFC163D81C85948E002E4F3B /* SigninViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFC163D61C85948E002E4F3B /* SigninViewController.xib */; };
+		C639B2A4C7B40B52611F1297 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D770E2A82A056E7D0FD5E25 /* libPods.a */; };
 		E3310A4A1C81FB8900D629F8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E3310A491C81FB8900D629F8 /* main.m */; };
 		E3310A4D1C81FB8900D629F8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E3310A4C1C81FB8900D629F8 /* AppDelegate.m */; };
 		E3310A501C81FB8900D629F8 /* ReadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3310A4F1C81FB8900D629F8 /* ReadViewController.m */; };
@@ -40,9 +43,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3D770E2A82A056E7D0FD5E25 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		5CC27450C18B072C7B3BFC51 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		AFC163CE1C8441D9002E4F3B /* MTFCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTFCollectionViewCell.h; sourceTree = "<group>"; };
 		AFC163CF1C8441D9002E4F3B /* MTFCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTFCollectionViewCell.m; sourceTree = "<group>"; };
 		AFC163D01C8441D9002E4F3B /* MTFCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MTFCollectionViewCell.xib; sourceTree = "<group>"; };
+		AFC163D41C85948E002E4F3B /* SigninViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SigninViewController.h; sourceTree = "<group>"; };
+		AFC163D51C85948E002E4F3B /* SigninViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SigninViewController.m; sourceTree = "<group>"; };
+		AFC163D61C85948E002E4F3B /* SigninViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SigninViewController.xib; sourceTree = "<group>"; };
+		D9A385BE2AE96AB1DDEE65BC /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		E3310A451C81FB8900D629F8 /* ICloudBook_ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ICloudBook_ios.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3310A491C81FB8900D629F8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E3310A4B1C81FB8900D629F8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -72,6 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C639B2A4C7B40B52611F1297 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,6 +102,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AB0BE947A1CEBA67F68C7F0C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3D770E2A82A056E7D0FD5E25 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		AFC163CD1C844199002E4F3B /* custom */ = {
 			isa = PBXGroup;
 			children = (
@@ -102,6 +120,16 @@
 			name = custom;
 			sourceTree = "<group>";
 		};
+		AFC163D31C859448002E4F3B /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				AFC163D41C85948E002E4F3B /* SigninViewController.h */,
+				AFC163D51C85948E002E4F3B /* SigninViewController.m */,
+				AFC163D61C85948E002E4F3B /* SigninViewController.xib */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
 		E3310A3C1C81FB8900D629F8 = {
 			isa = PBXGroup;
 			children = (
@@ -109,6 +137,8 @@
 				E3310A641C81FB8900D629F8 /* ICloudBook_iosTests */,
 				E3310A6F1C81FB8900D629F8 /* ICloudBook_iosUITests */,
 				E3310A461C81FB8900D629F8 /* Products */,
+				EF4D6113BF84300000E28CC3 /* Pods */,
+				AB0BE947A1CEBA67F68C7F0C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -125,6 +155,7 @@
 		E3310A471C81FB8900D629F8 /* ICloudBook_ios */ = {
 			isa = PBXGroup;
 			children = (
+				AFC163D31C859448002E4F3B /* Login */,
 				E3C3E95C1C8286E300F233AB /* Other */,
 				E3C3E95B1C8286CC00F233AB /* Launch */,
 				E3310A7E1C81FD0000D629F8 /* Main */,
@@ -227,6 +258,15 @@
 			name = Other;
 			sourceTree = "<group>";
 		};
+		EF4D6113BF84300000E28CC3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D9A385BE2AE96AB1DDEE65BC /* Pods.debug.xcconfig */,
+				5CC27450C18B072C7B3BFC51 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -234,9 +274,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E3310A751C81FB8900D629F8 /* Build configuration list for PBXNativeTarget "ICloudBook_ios" */;
 			buildPhases = (
+				EDF6D7C5B283DDE2A17E40A2 /* Check Pods Manifest.lock */,
 				E3310A411C81FB8900D629F8 /* Sources */,
 				E3310A421C81FB8900D629F8 /* Frameworks */,
 				E3310A431C81FB8900D629F8 /* Resources */,
+				F838FF2F231CEC00E3DA37DF /* Embed Pods Frameworks */,
+				6CF8429F604A995A6AA7FF02 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -334,6 +377,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E3310A5B1C81FB8900D629F8 /* LaunchScreen.storyboard in Resources */,
+				AFC163D81C85948E002E4F3B /* SigninViewController.xib in Resources */,
 				E3310A581C81FB8900D629F8 /* Assets.xcassets in Resources */,
 				E3310A561C81FB8900D629F8 /* Main.storyboard in Resources */,
 				AFC163D21C8441D9002E4F3B /* MTFCollectionViewCell.xib in Resources */,
@@ -356,11 +400,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		6CF8429F604A995A6AA7FF02 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EDF6D7C5B283DDE2A17E40A2 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F838FF2F231CEC00E3DA37DF /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		E3310A411C81FB8900D629F8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFC163D71C85948E002E4F3B /* SigninViewController.m in Sources */,
 				E3310A881C8201C700D629F8 /* PersonalViewController.m in Sources */,
 				E3310A531C81FB8900D629F8 /* CoursewareViewController.m in Sources */,
 				E3310A4D1C81FB8900D629F8 /* AppDelegate.m in Sources */,
@@ -504,25 +597,33 @@
 		};
 		E3310A761C81FB8900D629F8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D9A385BE2AE96AB1DDEE65BC /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = ICloudBook_ios/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.masterfan.ICloudBook-ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
 		E3310A771C81FB8900D629F8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5CC27450C18B072C7B3BFC51 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = ICloudBook_ios/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.masterfan.ICloudBook-ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

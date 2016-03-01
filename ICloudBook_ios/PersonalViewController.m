@@ -22,8 +22,13 @@
     // Do any additional setup after loading the view.
     _personTable.dataSource = self;
     _personTable.delegate   = self;
-//    [_personTable registerNib:[UINib nibWithNibName:@"PersonalTableViewCell" bundle:nil] forCellReuseIdentifier:@"identifier_personal"];
+    
+    
+    //[_personTable registerNib:[UINib nibWithNibName:@"PersonalTableViewCell" bundle:nil] forCellReuseIdentifier:@"identifier_personal"];
     _personTable.tableHeaderView = self.personHeaderView;
+    _personTable.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+        NSLog(@"refresh");
+    }];
     
     _personTable.tableFooterView = [[UIView alloc] init];//去除多余的分隔线
     

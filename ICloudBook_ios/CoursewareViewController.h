@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "MTFCollectionViewCell.h"
+#import "MTFCollectionViewCell.h"//customer cell
+#import <MJExtension.h>
 
 @interface CoursewareViewController : UIViewController<UICollectionViewDataSource, UICollectionViewDelegate>
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;

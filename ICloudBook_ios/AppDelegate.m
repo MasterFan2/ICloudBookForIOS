@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "SigninViewController.h"
 
 @interface AppDelegate ()
 
@@ -17,8 +18,12 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    SigninViewController* signinViewController = [[SigninViewController alloc] initWithNibName:@"SigninViewController" bundle:nil];
     
-    [NSThread sleepForTimeInterval:1.0];
+    self.window.rootViewController = signinViewController;
+    [self.window makeKeyAndVisible];
+    
+//    [NSThread sleepForTimeInterval:1.0];
     return YES;
 }
 

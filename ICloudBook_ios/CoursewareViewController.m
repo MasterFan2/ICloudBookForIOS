@@ -46,7 +46,7 @@
 
 ///指定cell宽、高
 -(CGSize) collectionView:(UICollectionView *) collectionView layout:(nonnull UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(nonnull NSIndexPath *)indexPath {
-    return CGSizeMake(100, 175);
+    return CGSizeMake(90, 120);
 }
 
 ///返回这个UICollectionViewCell是否可以被选择

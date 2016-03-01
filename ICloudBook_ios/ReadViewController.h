@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "MTFCollectionViewCell.h"
+#import <MJRefresh.h>
 
 @interface ReadViewController : UIViewController<UICollectionViewDataSource, UICollectionViewDelegate>
 @property (weak, nonatomic) IBOutlet UINavigationBar *myNavigator;

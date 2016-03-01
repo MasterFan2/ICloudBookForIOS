@@ -21,9 +21,17 @@
     // Do any additional setup after loading the view, typically from a nib.
     _readCollectionView.dataSource = self;
     _readCollectionView.delegate   = self;
+    
+//    _readCollectionView.contentInset = UIEdgeInsetsMake(0, 5, 0, 5);
+    
+    _readCollectionView.mj_header    = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+        NSLog(@"start refresh");
+    }];
+    
     [_readCollectionView registerNib:[UINib nibWithNibName:@"MTFCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"readCollectionIdentifier"];
 //    [_myNavigator setBackgroundColor:[UIColor greenColor]];
     listBook = [NSArray arrayWithObjects:@"老人与海", @"西游记", @"红楼梦", @"三国杀", @"时间简史", @"人工智能", nil];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -48,7 +56,7 @@
 
 ///指定cell宽、高
 -(CGSize) collectionView:(UICollectionView *) collectionView layout:(nonnull UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(nonnull NSIndexPath *)indexPath {
-    return CGSizeMake(100, 175);
+    return CGSizeMake(90, 120);
 }
 
 ///返回这个UICollectionViewCell是否可以被选择

@@ -21,6 +21,19 @@
     [img setFrame:CGRectMake(0, 0, 50, 50)];
     [nameTextField setLeftView:img];
     [nameTextField setLeftViewMode:UITextFieldViewModeAlways];
+    
+    
+    [signinButton addTarget:self action:@selector(signinClick) forControlEvents:UIControlEventTouchUpInside];
+}
+
+-(void) signinClick {
+    UIStoryboard* mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    UIViewController * indexViewController = [mainStoryboard instantiateInitialViewController];
+    [indexViewController setModalTransitionStyle:UIModalTransitionStyleCoverVertical];
+    
+    [self presentViewController:indexViewController animated:YES completion:^{
+        NSLog(@"登录成功");
+    }];
 }
 
 - (void)didReceiveMemoryWarning {

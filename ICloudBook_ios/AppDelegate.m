@@ -19,7 +19,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     SigninViewController* signinViewController = [[SigninViewController alloc] initWithNibName:@"SigninViewController" bundle:nil];
-    
+//
     self.window.rootViewController = signinViewController;
     [self.window makeKeyAndVisible];
     

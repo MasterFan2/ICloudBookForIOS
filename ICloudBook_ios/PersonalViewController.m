@@ -47,6 +47,7 @@
 
 -(void) headImageTap {
     ProfileViewController * profileVC = [[ProfileViewController alloc] initWithNibName:@"ProfileViewController" bundle:nil];
+    profileVC.hidesBottomBarWhenPushed=YES;
     [self.navigationController pushViewController:profileVC animated:YES];
 
 }
@@ -99,7 +100,8 @@
 }
 
 
--(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+-(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
 }
+
 @end

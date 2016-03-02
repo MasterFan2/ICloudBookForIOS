@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ProfileViewController : UIViewController
+@interface ProfileViewController : UIViewController<UITableViewDataSource, UITableViewDelegate> {
+    __weak IBOutlet UITableView *profileTable;
+}
 
 @end

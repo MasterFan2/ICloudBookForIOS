@@ -5,6 +5,23 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <scenes>
+        <!--Item-->
+        <scene sceneID="Zia-ta-9nV">
+            <objects>
+                <navigationController id="5n4-e4-6q4" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="RBm-FH-QVX"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="QP5-2m-f11">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="rootViewController" id="74C-zu-fQH"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rcw-7O-PYk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-11" y="-995"/>
+        </scene>
         <!--阅读-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
@@ -28,7 +45,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="readCollectionIdentifier" id="gZZ-gg-HMs">
-                                        <rect key="frame" x="0.0" y="0.0" width="98" height="125"/>
+                                        <rect key="frame" x="0.0" y="64" width="98" height="125"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="98" height="125"/>
@@ -48,6 +65,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="阅读" image="first" id="acW-dT-cKf"/>
+                    <navigationItem key="navigationItem" id="ksp-A4-9gF"/>
                     <connections>
                         <outlet property="myNavigator" destination="uyh-4g-M9u" id="G6n-CC-C0a"/>
                         <outlet property="readCollectionView" destination="Aly-1C-X8r" id="xFd-7b-c1a"/>
@@ -55,7 +73,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="424" y="-335"/>
+            <point key="canvasLocation" x="556" y="-1019"/>
         </scene>
         <!--课件-->
         <scene sceneID="wg7-f3-ORb">
@@ -124,15 +142,15 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
                         <segue destination="o9M-fT-bbZ" kind="relationship" relationship="viewControllers" id="PrB-RN-qny"/>
                         <segue destination="7Rc-57-REp" kind="relationship" relationship="viewControllers" id="SWw-SZ-Skh"/>
+                        <segue destination="5n4-e4-6q4" kind="relationship" relationship="viewControllers" id="WiE-gJ-3g1"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="0.0" y="0.0"/>
+            <point key="canvasLocation" x="-548" y="-8"/>
         </scene>
         <!--个人-->
         <scene sceneID="hky-XC-4GC">
@@ -164,6 +182,7 @@
                     <connections>
                         <outlet property="personHeaderView" destination="Ua9-V6-OmY" id="bH5-NL-Sob"/>
                         <outlet property="personTable" destination="cOp-78-Udr" id="U74-68-AyV"/>
+                        <outlet property="personalHeadImage" destination="BhA-v6-W72" id="9Sy-qk-XGC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uAK-pc-Pbb" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -189,16 +208,6 @@
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             <nil key="highlightedColor"/>
                         </label>
-                    </subviews>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                </view>
-                <view contentMode="scaleToFill" id="1iY-Oz-3IW">
-                    <rect key="frame" x="0.0" y="0.0" width="326" height="167"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="person_head_bg" translatesAutoresizingMaskIntoConstraints="NO" id="ygH-hf-r4a">
-                            <rect key="frame" x="0.0" y="0.0" width="326" height="167"/>
-                        </imageView>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </view>

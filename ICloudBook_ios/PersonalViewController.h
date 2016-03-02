@@ -12,6 +12,8 @@
 @interface PersonalViewController : UIViewController<UITableViewDataSource, UITableViewDelegate> {
     NSArray * images;
     NSArray * listData;
+    __weak IBOutlet UIImageView *personalHeadImage;
+    
 }
 @property (weak, nonatomic) IBOutlet UINavigationBar *navBar;
 @property (weak, nonatomic) IBOutlet UITableView *personTable;

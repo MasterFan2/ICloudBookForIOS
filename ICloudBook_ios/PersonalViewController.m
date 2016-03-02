@@ -5,7 +5,7 @@
 //  Created by MasterFan on 16/2/28.
 //  Copyright © 2016年 MasterFan. All rights reserved.
 //
-
+#import "ProfileViewController.h"
 #import "PersonalViewController.h"
 
 @interface PersonalViewController ()
@@ -20,6 +20,10 @@
     [super viewDidLoad];
     
     // Do any additional setup after loading the view.
+    [personalHeadImage setUserInteractionEnabled:YES];
+    UITapGestureRecognizer * singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(headImageTap)];
+    [personalHeadImage addGestureRecognizer:singleTap];
+    
     _personTable.dataSource = self;
     _personTable.delegate   = self;
     
@@ -28,6 +32,9 @@
     _personTable.tableHeaderView = self.personHeaderView;
     _personTable.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
         NSLog(@"refresh");
+        
+        [_personTable.mj_header endRefreshing];
+        
     }];
     
     _personTable.tableFooterView = [[UIView alloc] init];//去除多余的分隔线
@@ -36,6 +43,12 @@
     listData = [[NSArray alloc] initWithObjects:@"作品管理", @"我的上传", @"我的评论", @"我的书友", @"消息中心", @"摘录笔记", nil];
     images   = [[NSArray alloc] initWithObjects:@"ic_p_manage", @"ic_p_myupload", @"ic_p_comments", @"ic_p_friend", @"ic_p_msg", @"ic_p_note", nil];
     
+}
+
+-(void) headImageTap {
+    ProfileViewController * profileVC = [[ProfileViewController alloc] initWithNibName:@"ProfileViewController" bundle:nil];
+    [self.navigationController pushViewController:profileVC animated:YES];
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -85,4 +98,8 @@
     return 50;
 }
 
+
+-(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+}
 @end

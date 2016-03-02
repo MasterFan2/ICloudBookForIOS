@@ -12,4 +12,6 @@
     __weak IBOutlet UITableView *profileTable;
 }
 
+@property (nonatomic, retain) NSArray * dataList;
+
 @end

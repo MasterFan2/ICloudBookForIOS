@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "MTFCollectionViewCell.h"//customer cell
 #import <MJExtension.h>
+#import <MJRefresh.h>
 
 @interface CoursewareViewController : UIViewController<UICollectionViewDataSource, UICollectionViewDelegate>
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;

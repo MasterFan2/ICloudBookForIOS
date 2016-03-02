@@ -20,7 +20,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rcw-7O-PYk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-11" y="-995"/>
+            <point key="canvasLocation" x="-545" y="-829"/>
         </scene>
         <!--阅读-->
         <scene sceneID="hNz-n2-bh7">
@@ -65,7 +65,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="阅读" image="first" id="acW-dT-cKf"/>
-                    <navigationItem key="navigationItem" id="ksp-A4-9gF"/>
+                    <navigationItem key="navigationItem" title="阅读" id="ksp-A4-9gF"/>
                     <connections>
                         <outlet property="myNavigator" destination="uyh-4g-M9u" id="G6n-CC-C0a"/>
                         <outlet property="readCollectionView" destination="Aly-1C-X8r" id="xFd-7b-c1a"/>
@@ -73,7 +73,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="556" y="-1019"/>
+            <point key="canvasLocation" x="-136" y="-823"/>
         </scene>
         <!--课件-->
         <scene sceneID="wg7-f3-ORb">
@@ -128,7 +128,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="766" y="-335"/>
+            <point key="canvasLocation" x="418" y="-670"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -150,7 +150,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-548" y="-8"/>
+            <point key="canvasLocation" x="-1108" y="-88"/>
         </scene>
         <!--个人-->
         <scene sceneID="hky-XC-4GC">
@@ -178,7 +178,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="个人" image="second" id="TN7-Uj-00f"/>
-                    <navigationItem key="navigationItem" id="WPo-IK-YvZ"/>
+                    <navigationItem key="navigationItem" title="个人" id="WPo-IK-YvZ"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="personHeaderView" destination="Ua9-V6-OmY" id="bH5-NL-Sob"/>
@@ -213,7 +213,7 @@
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </view>
             </objects>
-            <point key="canvasLocation" x="1105" y="287"/>
+            <point key="canvasLocation" x="375" y="752"/>
         </scene>
         <!--管理-->
         <scene sceneID="IGZ-uX-0bx">
@@ -253,7 +253,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e5j-fC-MLt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="424" y="287"/>
+            <point key="canvasLocation" x="204" y="83"/>
         </scene>
         <!--Item-->
         <scene sceneID="1f5-lh-Qeq">
@@ -271,7 +271,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HZy-IQ-Bf5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="860" y="940"/>
+            <point key="canvasLocation" x="-100" y="752"/>
         </scene>
     </scenes>
     <resources>

@@ -33,6 +33,7 @@
     _personTable.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
         NSLog(@"refresh");
         
+        [NSThread sleepForTimeInterval:2.0f];
         [_personTable.mj_header endRefreshing];
         
     }];

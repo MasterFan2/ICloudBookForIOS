@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF7BC77B1C88337200A03787 /* ProfileTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AF7BC7791C88337200A03787 /* ProfileTableViewCell.m */; };
+		AF7BC77C1C88337200A03787 /* ProfileTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF7BC77A1C88337200A03787 /* ProfileTableViewCell.xib */; };
+		AF7BC77E1C88376A00A03787 /* Profile.plist in Resources */ = {isa = PBXBuildFile; fileRef = AF7BC77D1C88376A00A03787 /* Profile.plist */; };
 		AF989E0F1C86E1250014BD77 /* WorkManagementViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF989E0D1C86E1250014BD77 /* WorkManagementViewController.m */; };
 		AF989E101C86E1250014BD77 /* WorkManagementViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF989E0E1C86E1250014BD77 /* WorkManagementViewController.xib */; };
 		AF989E141C86E3340014BD77 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF989E121C86E3340014BD77 /* ProfileViewController.m */; };
@@ -49,6 +52,10 @@
 /* Begin PBXFileReference section */
 		3D770E2A82A056E7D0FD5E25 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CC27450C18B072C7B3BFC51 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		AF7BC7781C88337200A03787 /* ProfileTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileTableViewCell.h; sourceTree = "<group>"; };
+		AF7BC7791C88337200A03787 /* ProfileTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileTableViewCell.m; sourceTree = "<group>"; };
+		AF7BC77A1C88337200A03787 /* ProfileTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileTableViewCell.xib; sourceTree = "<group>"; };
+		AF7BC77D1C88376A00A03787 /* Profile.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Profile.plist; sourceTree = "<group>"; };
 		AF989E0C1C86E1250014BD77 /* WorkManagementViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkManagementViewController.h; sourceTree = "<group>"; };
 		AF989E0D1C86E1250014BD77 /* WorkManagementViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorkManagementViewController.m; sourceTree = "<group>"; };
 		AF989E0E1C86E1250014BD77 /* WorkManagementViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WorkManagementViewController.xib; sourceTree = "<group>"; };
@@ -120,12 +127,24 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		AF7BC7771C88334100A03787 /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				AF7BC7781C88337200A03787 /* ProfileTableViewCell.h */,
+				AF7BC7791C88337200A03787 /* ProfileTableViewCell.m */,
+				AF7BC77A1C88337200A03787 /* ProfileTableViewCell.xib */,
+			);
+			name = cell;
+			sourceTree = "<group>";
+		};
 		AF989E051C86DD4A0014BD77 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				AF7BC7771C88334100A03787 /* cell */,
 				AF989E111C86E3340014BD77 /* ProfileViewController.h */,
 				AF989E121C86E3340014BD77 /* ProfileViewController.m */,
 				AF989E131C86E3340014BD77 /* ProfileViewController.xib */,
+				AF7BC77D1C88376A00A03787 /* Profile.plist */,
 			);
 			name = Profile;
 			sourceTree = "<group>";
@@ -449,10 +468,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF989E151C86E3340014BD77 /* ProfileViewController.xib in Resources */,
+				AF7BC77E1C88376A00A03787 /* Profile.plist in Resources */,
 				AF989E101C86E1250014BD77 /* WorkManagementViewController.xib in Resources */,
 				E3310A5B1C81FB8900D629F8 /* LaunchScreen.storyboard in Resources */,
 				AFC163D81C85948E002E4F3B /* SigninViewController.xib in Resources */,
 				E3310A581C81FB8900D629F8 /* Assets.xcassets in Resources */,
+				AF7BC77C1C88337200A03787 /* ProfileTableViewCell.xib in Resources */,
 				E3310A561C81FB8900D629F8 /* Main.storyboard in Resources */,
 				AFC163D21C8441D9002E4F3B /* MTFCollectionViewCell.xib in Resources */,
 			);
@@ -530,6 +551,7 @@
 				AFC163D71C85948E002E4F3B /* SigninViewController.m in Sources */,
 				E3310A881C8201C700D629F8 /* PersonalViewController.m in Sources */,
 				E3310A531C81FB8900D629F8 /* CoursewareViewController.m in Sources */,
+				AF7BC77B1C88337200A03787 /* ProfileTableViewCell.m in Sources */,
 				E3310A4D1C81FB8900D629F8 /* AppDelegate.m in Sources */,
 				AF989E141C86E3340014BD77 /* ProfileViewController.m in Sources */,
 				E3310A501C81FB8900D629F8 /* ReadViewController.m in Sources */,

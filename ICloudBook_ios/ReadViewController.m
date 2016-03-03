@@ -22,10 +22,13 @@
     _readCollectionView.dataSource = self;
     _readCollectionView.delegate   = self;
     
-//    _readCollectionView.contentInset = UIEdgeInsetsMake(0, 5, 0, 5);
+    //set navigationBar text color.
+//    [self.navigationController.navigationBar setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor redColor], NSForegroundColorAttributeName, nil]];
     
     _readCollectionView.mj_header    = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
         NSLog(@"start refresh");
+        [NSThread sleepForTimeInterval:2];
+        [_readCollectionView.mj_header endRefreshing];
     }];
     
     [_readCollectionView registerNib:[UINib nibWithNibName:@"MTFCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"readCollectionIdentifier"];
@@ -68,6 +71,7 @@
 -( void )collectionView:( UICollectionView *)collectionView didSelectItemAtIndexPath:( NSIndexPath *)indexPath{
     UICollectionViewCell * cell = ( UICollectionViewCell *)[collectionView cellForItemAtIndexPath :indexPath];
     cell. backgroundColor = [ UIColor colorWithRed :(( arc4random ()% 255 )/ 255.0 ) green :(( arc4random ()% 255 )/ 255.0 ) blue :(( arc4random ()% 255 )/ 255.0 ) alpha : 1.0f ];
+    
 }
 
 @end

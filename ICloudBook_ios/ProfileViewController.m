@@ -19,7 +19,17 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     [self.navigationController setTitle:@"Profile"];
-    dataList = [NSArray arrayWithObjects:@"姓名", @"电话", @"班级", @"座右铭", @"生日", @"星座", nil];
+//    dataList = [NSArray arrayWithObjects:@"姓名", @"电话", @"班级", @"座右铭", @"生日", @"星座", nil];
+    
+    ///follow two lines to set title.
+    self.title=@"个人信息设置";
+//    self.navigationItem.title=@"个人信息设置";
+
+
+    ///读取plist中文件的内容。
+    NSString * plistPath = [[NSBundle mainBundle] pathForResource:@"Profile" ofType:@"plist"];
+    NSMutableDictionary * dict = [[NSMutableDictionary alloc] initWithContentsOfFile:plistPath];
+    dataList = dict.allKeys;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -59,13 +69,10 @@
 //    return 50;
 //}
 
+
 ///click
 -(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
-}
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 2;
 }
 
 

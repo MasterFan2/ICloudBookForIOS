@@ -19,12 +19,21 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     [_collectionView registerNib:[UINib nibWithNibName:@"MTFCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"readCollectionIdentifier"];
+    
+    //add refresh
     _collectionView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
         [NSThread sleepForTimeInterval:2.5];
         [_collectionView.mj_header endRefreshing];
     }];
     
-    listCourseware = [NSArray arrayWithObjects:@"三角函数一章", @"函数概念", @"初三地理知识", @"三角函数二章", @"速查字典", @"课外活动", nil];}
+    //set navigationBar background
+//    [self.navigationController.navigationBar setBarTintColor:[UIColor redColor]];
+
+    listCourseware = [NSArray arrayWithObjects:@"三角函数一章", @"函数概念", @"初三地理知识", @"三角函数二章", @"速查字典", @"课外活动", nil];
+    self.navigationController.title = @"aaaaa";
+}
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

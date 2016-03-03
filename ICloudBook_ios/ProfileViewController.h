@@ -13,5 +13,6 @@
 }
 
 @property (nonatomic, retain) NSArray * dataList;
+@property (nonatomic, retain) NSDictionary * pDict;
 
 @end

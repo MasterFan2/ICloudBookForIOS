@@ -2,7 +2,7 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>头像</key>
+	<key>a头像</key>
 	<dict>
 		<key>desc</key>
 		<string>头像</string>
@@ -11,7 +11,7 @@
 		<key>value</key>
 		<string>http://www.baidu.com</string>
 	</dict>
-	<key>姓名</key>
+	<key>b姓名</key>
 	<dict>
 		<key>type</key>
 		<integer>0</integer>
@@ -20,7 +20,7 @@
 		<key>desc</key>
 		<string>没有箭头</string>
 	</dict>
-	<key>昵称</key>
+	<key>c昵称</key>
 	<dict>
 		<key>type</key>
 		<integer>1</integer>
@@ -29,7 +29,7 @@
 		<key>desc</key>
 		<string>箭头</string>
 	</dict>
-	<key>性别</key>
+	<key>d性别</key>
 	<dict>
 		<key>desc</key>
 		<string>箭头</string>
@@ -38,7 +38,7 @@
 		<key>value</key>
 		<string>男</string>
 	</dict>
-	<key>生日</key>
+	<key>e生日</key>
 	<dict>
 		<key>desc</key>
 		<string>箭头</string>
@@ -47,7 +47,7 @@
 		<key>value</key>
 		<string>1998-07-23</string>
 	</dict>
-	<key>班级</key>
+	<key>f班级</key>
 	<dict>
 		<key>desc</key>
 		<string>箭头</string>
@@ -56,7 +56,7 @@
 		<key>value</key>
 		<string>2016级1班</string>
 	</dict>
-	<key>电话</key>
+	<key>g电话</key>
 	<dict>
 		<key>desc</key>
 		<string>箭头</string>
@@ -65,7 +65,7 @@
 		<key>value</key>
 		<string>13983120224</string>
 	</dict>
-	<key>邮箱</key>
+	<key>h邮箱</key>
 	<dict>
 		<key>desc</key>
 		<string>箭头</string>
@@ -74,7 +74,7 @@
 		<key>value</key>
 		<string>13983120224@qq.com</string>
 	</dict>
-	<key>修改密码</key>
+	<key>i修改密码</key>
 	<dict>
 		<key>desc</key>
 		<string>只有箭头</string>
@@ -83,7 +83,7 @@
 		<key>value</key>
 		<string></string>
 	</dict>
-	<key>座右铭</key>
+	<key>j座右铭</key>
 	<dict>
 		<key>desc</key>
 		<string>箭头和详细</string>
@@ -92,7 +92,7 @@
 		<key>value</key>
 		<string>天行健，君子应自强不息</string>
 	</dict>
-	<key>自我介绍</key>
+	<key>k自我介绍</key>
 	<dict>
 		<key>desc</key>
 		<string>箭头和详细</string>

@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
-<dict>
-	<key>a头像</key>
+<array>
 	<dict>
+		<key>label</key>
+		<string>头像</string>
 		<key>desc</key>
 		<string>头像</string>
 		<key>type</key>
@@ -11,8 +12,9 @@
 		<key>value</key>
 		<string>http://www.baidu.com</string>
 	</dict>
-	<key>b姓名</key>
 	<dict>
+		<key>label</key>
+		<string>姓名</string>
 		<key>type</key>
 		<integer>0</integer>
 		<key>value</key>
@@ -20,8 +22,9 @@
 		<key>desc</key>
 		<string>没有箭头</string>
 	</dict>
-	<key>c昵称</key>
 	<dict>
+		<key>label</key>
+		<string>昵称</string>
 		<key>type</key>
 		<integer>1</integer>
 		<key>value</key>
@@ -29,8 +32,9 @@
 		<key>desc</key>
 		<string>箭头</string>
 	</dict>
-	<key>d性别</key>
 	<dict>
+		<key>label</key>
+		<string>性别</string>
 		<key>desc</key>
 		<string>箭头</string>
 		<key>type</key>
@@ -38,8 +42,9 @@
 		<key>value</key>
 		<string>男</string>
 	</dict>
-	<key>e生日</key>
 	<dict>
+		<key>label</key>
+		<string>生日</string>
 		<key>desc</key>
 		<string>箭头</string>
 		<key>type</key>
@@ -47,8 +52,9 @@
 		<key>value</key>
 		<string>1998-07-23</string>
 	</dict>
-	<key>f班级</key>
 	<dict>
+		<key>label</key>
+		<string>班级</string>
 		<key>desc</key>
 		<string>箭头</string>
 		<key>type</key>
@@ -56,8 +62,9 @@
 		<key>value</key>
 		<string>2016级1班</string>
 	</dict>
-	<key>g电话</key>
 	<dict>
+		<key>label</key>
+		<string>电话</string>
 		<key>desc</key>
 		<string>箭头</string>
 		<key>type</key>
@@ -65,8 +72,9 @@
 		<key>value</key>
 		<string>13983120224</string>
 	</dict>
-	<key>h邮箱</key>
 	<dict>
+		<key>label</key>
+		<string>邮箱</string>
 		<key>desc</key>
 		<string>箭头</string>
 		<key>type</key>
@@ -74,8 +82,9 @@
 		<key>value</key>
 		<string>13983120224@qq.com</string>
 	</dict>
-	<key>i修改密码</key>
 	<dict>
+		<key>label</key>
+		<string>修改密码</string>
 		<key>desc</key>
 		<string>只有箭头</string>
 		<key>type</key>
@@ -83,8 +92,9 @@
 		<key>value</key>
 		<string></string>
 	</dict>
-	<key>j座右铭</key>
 	<dict>
+		<key>label</key>
+		<string>座右铭</string>
 		<key>desc</key>
 		<string>箭头和详细</string>
 		<key>type</key>
@@ -92,8 +102,9 @@
 		<key>value</key>
 		<string>天行健，君子应自强不息</string>
 	</dict>
-	<key>k自我介绍</key>
 	<dict>
+		<key>label</key>
+		<string>自我介绍</string>
 		<key>desc</key>
 		<string>箭头和详细</string>
 		<key>type</key>
@@ -101,5 +112,5 @@
 		<key>value</key>
 		<string>my name is Haha.</string>
 	</dict>
-</dict>
+</array>
 </plist>

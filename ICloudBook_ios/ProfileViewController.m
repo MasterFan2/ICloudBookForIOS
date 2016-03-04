@@ -28,9 +28,7 @@
 
     ///load content from plist file.
     NSString * plistPath = [[NSBundle mainBundle] pathForResource:@"Profile" ofType:@"plist"];
-    self.pDict = [[NSDictionary alloc] initWithContentsOfFile:plistPath];
-    dataList = self.pDict.allKeys;
-    
+    dataList = [[NSArray alloc] initWithContentsOfFile:plistPath];
     
     ///comparator
 //    NSComparator sort = ^(NSString *obj1,NSString *obj2){
@@ -76,40 +74,50 @@
     static NSString* identifier = @"profileIdentifier";
     UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:identifier];
     
-    NSDictionary* tempDict = [self.pDict valueForKey:[dataList objectAtIndex:[indexPath row]]];
+    NSDictionary * tempDict = [dataList objectAtIndex:[indexPath row]];
     
     NSNumber *type = [tempDict objectForKey:@"type"];
-    
-    NSLog(@"%@", type);
     
     if (cell == nil) {
         if ([type compare:[NSNumber numberWithInt:0]] == NSOrderedSame) {       ///0.normal
             cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:identifier];
+            cell.detailTextLabel.text = tempDict[@"value"];
             
         } else if ([type compare:[NSNumber numberWithInt:1]] == NSOrderedSame) {///1.arrow
             cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:identifier];
             cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-            cell.detailTextLabel.text = @"Ha.";
+            cell.detailTextLabel.text = tempDict[@"value"];
             
         } else if ([type compare:[NSNumber numberWithInt:2]] == NSOrderedSame) {///2.head picture
             cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:identifier];
-            cell.detailTextLabel.text = @"Ha.";
+            UIImageView * headImg = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"person_head_img"]];
+            [headImg setFrame:CGRectMake(0, 0, 45, 45)];
+            [headImg setTag:909];
+            
+            cell.accessoryView = headImg;
+            
+            cell.accessoryType=UITableViewCellAccessoryNone;
             
         } else if ([type compare:[NSNumber numberWithInt:3]] == NSOrderedSame) {///3.single label
             cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:identifier];
             cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-            cell.detailTextLabel.text = @"";
+            cell.detailTextLabel.text = tempDict[@"value"];
             
         } else {///4                                                            ///4.double labels.
             cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:identifier];
-            cell.detailTextLabel.text = @"Ha.";
+            cell.detailTextLabel.text = tempDict[@"value"];
+            cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
         }
         
     }
     
-    cell.textLabel.text = [dataList objectAtIndex:indexPath.row];
+    cell.textLabel.text = tempDict[@"label"];
     
     return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 56;
 }
 
 ///tableView row height
@@ -120,9 +128,97 @@
 
 ///click
 -(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    
+    switch (indexPath.row) {
+        case 0:
+        {
+            UIActionSheet * actionSheet = [[UIActionSheet alloc] initWithTitle:@"修改头像" delegate:self cancelButtonTitle:@"取消" destructiveButtonTitle:nil otherButtonTitles:@"相机", @"相册选择", nil];
+            [actionSheet setTitle:@"修改头像"];
+        
+            [actionSheet showInView:self.view];
+        }
+            break;
+//        case 1://姓名暂时不能修改
+//            
+//            break;
+        case 2:
+            
+            break;
+        case 3:
+            
+            break;
+        case 4:
+            
+            break;
+        case 5:
+            
+            break;
+        case 6:
+            
+            break;
+        case 7:
+            
+            break;
+        case 8:
+            
+            break;
+        case 9:
+            
+            break;
+        case 10:
+            
+            break;
+        default:
+            
+            break;
+    }
 }
 
+///action sheet click
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
+    switch (buttonIndex) {
+        case 0:
+            if ([UIImagePickerController isCameraDeviceAvailable:UIImagePickerControllerCameraDeviceRear]) {
+                UIImagePickerController* imagePicker = [[UIImagePickerController alloc] init];
+                imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
+                imagePicker.delegate   = self;
+                [self presentViewController:imagePicker animated:YES completion:^{}];
+            }else{
+                
+            }
+            break;
+        case 1:
+        {
+            UIImagePickerController* imagePicker = [[UIImagePickerController alloc] init];
+            imagePicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+            imagePicker.delegate   = self;
+            [self presentViewController:imagePicker animated:YES completion:^{}];
+            
+        }
+            break;
+        default:
+            break;
+    }
+}
+
+#pragma ImagePicker delegate
+-(void) imagePickerController:(UIImagePickerController *)picker didFinishPickingImage:(UIImage *)image editingInfo:(NSDictionary<NSString *,id> *)editingInfo {
+    UIImageView * imageView = (UIImageView *)[self.view viewWithTag:909];
+    imageView.image = image;
+    [picker dismissViewControllerAnimated:YES completion:NULL];
+}
+///image picker choose.
+//- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(nonnull NSDictionary<NSString *,id> *)info {
+//    UIImageView * imageView = (UIImageView *)[self.view viewWithTag:909];
+//    UIImage * image = [info objectForKey:UIImagePickerControllerEditedImage];
+//    imageView.image = image;
+//    [picker dismissViewControllerAnimated:YES completion:NULL];
+//}
+
+///cancel select
+-(void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
+    NSLog(@"取消选择");
+    [picker dismissViewControllerAnimated:YES completion:NULL];
+}
 
 
 @end

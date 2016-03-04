@@ -127,6 +127,69 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		AF2C898F1C89813F00BD4AC1 /* ModifyNickname */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = ModifyNickname;
+			sourceTree = "<group>";
+		};
+		AF2C89901C8981B000BD4AC1 /* ModifyGender */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = ModifyGender;
+			sourceTree = "<group>";
+		};
+		AF2C89911C8981D300BD4AC1 /* ModifyBirthday */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = ModifyBirthday;
+			sourceTree = "<group>";
+		};
+		AF2C89921C8981E100BD4AC1 /* ModifyClasses */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = ModifyClasses;
+			sourceTree = "<group>";
+		};
+		AF2C89931C8981EB00BD4AC1 /* ModifyPhone */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = ModifyPhone;
+			sourceTree = "<group>";
+		};
+		AF2C89941C8981F800BD4AC1 /* ModifyMail */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = ModifyMail;
+			sourceTree = "<group>";
+		};
+		AF2C89951C89820900BD4AC1 /* ModifyPassword */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = ModifyPassword;
+			sourceTree = "<group>";
+		};
+		AF2C89961C89821200BD4AC1 /* ModifyMotto */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = ModifyMotto;
+			sourceTree = "<group>";
+		};
+		AF2C89971C89826E00BD4AC1 /* ModifyIntroduction */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = ModifyIntroduction;
+			sourceTree = "<group>";
+		};
 		AF7BC7771C88334100A03787 /* cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -140,6 +203,15 @@
 		AF989E051C86DD4A0014BD77 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				AF2C89971C89826E00BD4AC1 /* ModifyIntroduction */,
+				AF2C89961C89821200BD4AC1 /* ModifyMotto */,
+				AF2C89951C89820900BD4AC1 /* ModifyPassword */,
+				AF2C89941C8981F800BD4AC1 /* ModifyMail */,
+				AF2C89931C8981EB00BD4AC1 /* ModifyPhone */,
+				AF2C89921C8981E100BD4AC1 /* ModifyClasses */,
+				AF2C89911C8981D300BD4AC1 /* ModifyBirthday */,
+				AF2C89901C8981B000BD4AC1 /* ModifyGender */,
+				AF2C898F1C89813F00BD4AC1 /* ModifyNickname */,
 				AF7BC7771C88334100A03787 /* cell */,
 				AF989E111C86E3340014BD77 /* ProfileViewController.h */,
 				AF989E121C86E3340014BD77 /* ProfileViewController.m */,

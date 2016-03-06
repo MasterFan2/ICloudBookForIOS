@@ -8,10 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ProfileViewController : UIViewController<UITableViewDataSource, UITableViewDelegate, UIActionSheetDelegate, UIImagePickerControllerDelegate> {
+@interface ProfileViewController : UIViewController<UITableViewDataSource, UITableViewDelegate, UIActionSheetDelegate, UIImagePickerControllerDelegate, UIPickerViewDataSource, UIPickerViewDelegate> {
     __weak IBOutlet UITableView *profileTable;
 }
 
-@property (nonatomic, retain) NSArray * dataList;
+@property (nonatomic, retain) NSMutableArray * dataList;
+@property (assign, nonatomic) NSInteger clickLine;
+
+@property (nonatomic, retain) NSMutableDictionary * classes;
 
 @end

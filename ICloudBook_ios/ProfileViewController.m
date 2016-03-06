@@ -7,47 +7,66 @@
 //
 
 #import "ProfileViewController.h"
+#import "ModifyNicknameViewController.h"
 
 @interface ProfileViewController ()
 
 @end
 
 @implementation ProfileViewController
-@synthesize  dataList;
+@synthesize  dataList;  //main datas
+@synthesize clickLine;  //selected type . switch infomation
+@synthesize classes;    //classes
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
-    [self.navigationController setTitle:@"Profile"];
-//    dataList = [NSArray arrayWithObjects:@"姓名", @"电话", @"班级", @"座右铭", @"生日", @"星座", nil];
+    
+    ///default
+    clickLine = 0;
     
     ///follow two lines to set title.
-    self.title=@"个人信息设置";
-//    self.navigationItem.title=@"个人信息设置";
-
+    self.title=@"个人信息设置";// or self.navigationItem.title=@"个人信息设置";
+    
+    ///register modify nickname callback
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(nicknameCompletion:) name:@"registerCompletionNotification" object:nil];
 
     ///load content from plist file.
     NSString * plistPath = [[NSBundle mainBundle] pathForResource:@"Profile" ofType:@"plist"];
-    dataList = [[NSArray alloc] initWithContentsOfFile:plistPath];
+    dataList = [[NSMutableArray alloc] initWithContentsOfFile:plistPath];
     
-    ///comparator
-//    NSComparator sort = ^(NSString *obj1,NSString *obj2){
-//        unichar obj1Char = [obj1 characterAtIndex:0];
-//        unichar obj2Char = [obj2 characterAtIndex:0];
-//        
-//        NSLog(@"obj1char=%c,     obj2Char=%c", obj1Char, obj2Char);
-//        
-//        if (obj1Char > obj2Char) {
-//            return NSOrderedDescending;
-//        }else if (obj1Char < obj2Char){
-//            return NSOrderedAscending;
-//        }else {
-//            return NSOrderedSame;
-//        }
-//    };
-//    
-//    [dataList sortedArrayUsingComparator:sort];
+    ///
+    
+   classes =  [NSMutableDictionary dictionaryWithObjectsAndKeys:@[@"1班", @"2班"], @"2012级",
+              @[@"1班", @"2班", @"3班", @"4班", @"5班"], @"2013级",
+              @[@"1班", @"2班", @"3班"], @"2014级",
+               @[@"1班", @"2班", @"3班", @"4班"], @"2015级",
+               nil];
+
+    if (classes != nil && [classes count] > 0) {
+        NSLog(@"has data");
+    }else {
+        NSLog(@"empty arry");
+    }
 }
+
+
+//_____________________________________beautiful Separator line________________________________________________start
+///nickname callback
+-(void) nicknameCompletion:(NSNotification *) notification {
+    //get data and set to orign
+    NSDictionary * data = [notification userInfo];
+    NSString * username = [data objectForKey:@"username"];
+    [dataList objectAtIndex:2][@"value"] = username;
+    
+    ///get indexpath & correspond refresh row
+    NSIndexPath *indexPath=[NSIndexPath indexPathForRow:2 inSection:0];
+    [profileTable reloadRowsAtIndexPaths:[NSArray arrayWithObjects:indexPath,nil] withRowAnimation:UITableViewRowAnimationAutomatic];
+}
+
+
+
+//--------------------------------------beautiful separator line------------------------------------------------end
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -131,40 +150,94 @@
     switch (indexPath.row) {
         case 0:
         {
+            clickLine = 0;
             UIActionSheet * actionSheet = [[UIActionSheet alloc] initWithTitle:@"修改头像" delegate:self cancelButtonTitle:@"取消" destructiveButtonTitle:nil otherButtonTitles:@"相机", @"相册选择", nil];
-            [actionSheet setTitle:@"修改头像"];
-        
             [actionSheet showInView:self.view];
         }
             break;
 //        case 1://姓名暂时不能修改
 //            
 //            break;
-        case 2:
+        case 2://modify nickname
+        {
+            ModifyNicknameViewController * modifyNicknameVc = [[ModifyNicknameViewController alloc] initWithNibName:@"ModifyNicknameViewController" bundle:nil];
+            [self.navigationController pushViewController:modifyNicknameVc animated:YES];
+        }
+            break;
+        case 3: {//modify gender.
+            clickLine = 3;
+            UIActionSheet * actionSheet = [[UIActionSheet alloc] initWithTitle:@"修改性别" delegate:self cancelButtonTitle:@"取消" destructiveButtonTitle:nil otherButtonTitles:@"男", @"女", nil];
+            [actionSheet showInView:self.view];
+        }
+            break;
+            
+        case 4: {//modify birthday
+            clickLine = 4;
+//            UIActionSheet * actionSheet = [[UIActionSheet alloc] initWithTitle:@"选择生日" delegate:self cancelButtonTitle:@"取消" destructiveButtonTitle:nil otherButtonTitles:@"确定", nil];
+//            actionSheet.tag = 333;
+//            
+//            
+//            [actionSheet showInView:self.view];
+            UIAlertController * alertController = [UIAlertController alertControllerWithTitle:@"\n\n\n\n\n\n\n\n\n" message:nil preferredStyle:UIAlertControllerStyleActionSheet];
+            UIAlertAction     * cancelAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action){
+                if ([action.title compare:@"确定"] == NSOrderedSame) {
+                    UIDatePicker * picker = (UIDatePicker *)[alertController.view viewWithTag:101];
+                    NSDateFormatter * formatter = [[NSDateFormatter alloc] init];
+                    formatter.dateFormat = @"YYYY年MM月dd日";
+                    NSString* timestamp = [formatter stringFromDate:picker.date];
+                    
+                    
+                    NSMutableDictionary * dict = [dataList objectAtIndex:4];
+                    [dict setObject:timestamp forKey:@"value"];
+                    [dataList replaceObjectAtIndex:4 withObject:dict];
+                    
+                    [profileTable reloadData];
+//                    dispatch_async(dispatch_get_main_queue(), ^{[profileTable reloadData];});
+                }
+                
+            }];
+            
+            UIDatePicker * datePicker = [[UIDatePicker alloc] init];
+            datePicker.tag = 101;
+            datePicker.datePickerMode = UIDatePickerModeDate;
+//            [actionSheet addSubview:datePicker];
+            [alertController.view addSubview:datePicker];
+            [alertController addAction:cancelAction];
+            [self presentViewController:alertController animated:YES completion:nil];
+            
+            
+        }
+            break;
+            
+        case 5: {//modify class
+            UIAlertController * alertController = [UIAlertController alertControllerWithTitle:@"\n\n\n\n\n\n\n\n\n" message:nil preferredStyle:UIAlertControllerStyleActionSheet];
+            UIAlertAction     * cancelAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action){}];
+            UIPickerView      * pickerView   = [[UIPickerView alloc]init];
+            pickerView.delegate = self;
+            pickerView.dataSource = self;
+            pickerView.tag = 102;
+            
+            [alertController.view addSubview:pickerView];
+            [alertController addAction:cancelAction];
+            [self presentViewController:alertController animated:YES completion:nil];
+
+        }
+            break;
+            
+        case 6://modify phone
             
             break;
-        case 3:
+            
+        case 7://modify mail
             
             break;
-        case 4:
+        case 8://modify password
             
             break;
-        case 5:
+        case 9://modify motto
             
             break;
-        case 6:
-            
-            break;
-        case 7:
-            
-            break;
-        case 8:
-            
-            break;
-        case 9:
-            
-            break;
-        case 10:
+        case 10://modify introduction
             
             break;
         default:
@@ -173,31 +246,58 @@
     }
 }
 
-///action sheet click
+#pragma action sheet click
 - (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
-    switch (buttonIndex) {
-        case 0:
-            if ([UIImagePickerController isCameraDeviceAvailable:UIImagePickerControllerCameraDeviceRear]) {
+    if (clickLine == 0) {//modify head image
+        switch (buttonIndex) {
+            case 0:
+                if ([UIImagePickerController isCameraDeviceAvailable:UIImagePickerControllerCameraDeviceRear]) {
+                    UIImagePickerController* imagePicker = [[UIImagePickerController alloc] init];
+                    imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
+                    imagePicker.delegate   = self;
+                    [self presentViewController:imagePicker animated:YES completion:^{}];
+                }else{
+                    
+                }
+                break;
+            case 1:
+            {
                 UIImagePickerController* imagePicker = [[UIImagePickerController alloc] init];
-                imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
+                imagePicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
                 imagePicker.delegate   = self;
                 [self presentViewController:imagePicker animated:YES completion:^{}];
-            }else{
                 
             }
-            break;
-        case 1:
-        {
-            UIImagePickerController* imagePicker = [[UIImagePickerController alloc] init];
-            imagePicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
-            imagePicker.delegate   = self;
-            [self presentViewController:imagePicker animated:YES completion:^{}];
+                break;
+            default:
+                break;
+        }/// end switch
+        
+    } else if (clickLine == 3){///modify gender.
+        NSString* gender = nil;
+        switch (buttonIndex) {
+            case 0:
+                gender = @"男";
+                break;
+            case 1:
+                gender = @"女";
+                break;
+            default:
+                break;
+        }//end switch
+        
+        if (gender != nil) {
             
+            [dataList objectAtIndex:3][@"value"] = gender;
+            
+            ///get indexpath & correspond refresh row
+            NSIndexPath *indexPath=[NSIndexPath indexPathForRow:3 inSection:0];
+            [profileTable reloadRowsAtIndexPaths:[NSArray arrayWithObjects:indexPath,nil] withRowAnimation:UITableViewRowAnimationFade];
+
         }
-            break;
-        default:
-            break;
-    }
+        
+    }//end modify gender;
+    
 }
 
 #pragma ImagePicker delegate
@@ -220,5 +320,33 @@
     [picker dismissViewControllerAnimated:YES completion:NULL];
 }
 
+#pragma pickerView delegate 
+- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView{
+    return 2;
+}
+
+- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component{
+    if (component == 0) {
+        return [[classes allKeys] count];
+    }else {
+        NSInteger row = [pickerView selectedRowInComponent:0];
+        return [[classes objectForKey:[[classes allKeys] objectAtIndex:row]] count];
+    }
+}
+
+- (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component{
+    if (0 == component) {
+        NSString * key = [[classes allKeys] objectAtIndex:row];
+       return key;
+    }else{
+        NSInteger tempRow = [pickerView selectedRowInComponent:0];
+        NSArray * tempArr = [classes objectForKey:[[classes allKeys] objectAtIndex:tempRow]];
+        return tempArr[row];
+    }
+}
+
+- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component{
+    NSLog(@"didSelectRow");
+}
 
 @end

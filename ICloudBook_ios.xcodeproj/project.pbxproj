@@ -30,6 +30,8 @@
 		E3310A711C81FB8900D629F8 /* ICloudBook_iosUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E3310A701C81FB8900D629F8 /* ICloudBook_iosUITests.m */; };
 		E3310A851C8201BA00D629F8 /* ManagementViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3310A841C8201BA00D629F8 /* ManagementViewController.m */; };
 		E3310A881C8201C700D629F8 /* PersonalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3310A871C8201C700D629F8 /* PersonalViewController.m */; };
+		E37A68801C8AC4EE0013395E /* ModifyNicknameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E37A687E1C8AC4EE0013395E /* ModifyNicknameViewController.m */; };
+		E37A68811C8AC4EE0013395E /* ModifyNicknameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E37A687F1C8AC4EE0013395E /* ModifyNicknameViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +93,9 @@
 		E3310A841C8201BA00D629F8 /* ManagementViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ManagementViewController.m; sourceTree = "<group>"; };
 		E3310A861C8201C700D629F8 /* PersonalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonalViewController.h; sourceTree = "<group>"; };
 		E3310A871C8201C700D629F8 /* PersonalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonalViewController.m; sourceTree = "<group>"; };
+		E37A687D1C8AC4EE0013395E /* ModifyNicknameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModifyNicknameViewController.h; sourceTree = "<group>"; };
+		E37A687E1C8AC4EE0013395E /* ModifyNicknameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModifyNicknameViewController.m; sourceTree = "<group>"; };
+		E37A687F1C8AC4EE0013395E /* ModifyNicknameViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ModifyNicknameViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +135,9 @@
 		AF2C898F1C89813F00BD4AC1 /* ModifyNickname */ = {
 			isa = PBXGroup;
 			children = (
+				E37A687D1C8AC4EE0013395E /* ModifyNicknameViewController.h */,
+				E37A687E1C8AC4EE0013395E /* ModifyNicknameViewController.m */,
+				E37A687F1C8AC4EE0013395E /* ModifyNicknameViewController.xib */,
 			);
 			name = ModifyNickname;
 			sourceTree = "<group>";
@@ -539,6 +547,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E37A68811C8AC4EE0013395E /* ModifyNicknameViewController.xib in Resources */,
 				AF989E151C86E3340014BD77 /* ProfileViewController.xib in Resources */,
 				AF7BC77E1C88376A00A03787 /* Profile.plist in Resources */,
 				AF989E101C86E1250014BD77 /* WorkManagementViewController.xib in Resources */,
@@ -630,6 +639,7 @@
 				AF989E0F1C86E1250014BD77 /* WorkManagementViewController.m in Sources */,
 				E3310A851C8201BA00D629F8 /* ManagementViewController.m in Sources */,
 				AFC163D11C8441D9002E4F3B /* MTFCollectionViewCell.m in Sources */,
+				E37A68801C8AC4EE0013395E /* ModifyNicknameViewController.m in Sources */,
 				E3310A4A1C81FB8900D629F8 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

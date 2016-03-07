@@ -7,6 +7,7 @@
 //
 
 #import "ModifyNicknameViewController.h"
+#import "ProfileViewController.h"
 
 @interface ModifyNicknameViewController ()
 
@@ -16,7 +17,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.title = @"修改昵称";
     // Do any additional setup after loading the view from its nib.
+    
 }
 
 - (void)didReceiveMemoryWarning {

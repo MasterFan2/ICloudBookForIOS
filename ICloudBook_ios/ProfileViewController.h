@@ -16,5 +16,8 @@
 @property (assign, nonatomic) NSInteger clickLine;
 
 @property (nonatomic, retain) NSMutableDictionary * classes;
+@property (nonatomic, retain) NSArray * headClasses;
+
+@property (nonatomic, assign) NSInteger what;//page.
 
 @end

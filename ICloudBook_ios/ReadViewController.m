@@ -18,6 +18,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.navigationController.navigationBar.backgroundColor = [UIColor colorWithRed:40/255.0 green:169/255.0 blue:97/255.0 alpha:1];
+    self.navigationController.navigationBar.translucent = NO;
     // Do any additional setup after loading the view, typically from a nib.
     _readCollectionView.dataSource = self;
     _readCollectionView.delegate   = self;

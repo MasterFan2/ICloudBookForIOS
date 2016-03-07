@@ -12,6 +12,7 @@
     
     __weak IBOutlet UITextField *nicknameTextField;
 }
+
 - (IBAction)confirm:(id)sender;
 
 @end

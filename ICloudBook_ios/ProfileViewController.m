@@ -8,6 +8,11 @@
 
 #import "ProfileViewController.h"
 #import "ModifyNicknameViewController.h"
+#import "ModifyPwdViewController.h"
+#import "ModifyPhoneViewController.h"
+#import "ModifyEmailViewController.h"
+#import "ModifyMottoViewController.h"
+#import "ModifyIntroViewController.h"
 
 @interface ProfileViewController ()
 
@@ -17,6 +22,8 @@
 @synthesize  dataList;  //main datas
 @synthesize clickLine;  //selected type . switch infomation
 @synthesize classes;    //classes
+@synthesize headClasses;//
+@synthesize what;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -25,7 +32,7 @@
     clickLine = 0;
     
     ///follow two lines to set title.
-    self.title=@"个人信息设置";// or self.navigationItem.title=@"个人信息设置";
+    self.title=@"个人设置";// or self.navigationItem.title=@"个人信息设置";
     
     ///register modify nickname callback
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(nicknameCompletion:) name:@"registerCompletionNotification" object:nil];
@@ -41,7 +48,8 @@
               @[@"1班", @"2班", @"3班"], @"2014级",
                @[@"1班", @"2班", @"3班", @"4班"], @"2015级",
                nil];
-
+    headClasses = [classes allKeys];
+    
     if (classes != nil && [classes count] > 0) {
         NSLog(@"has data");
     }else {
@@ -145,6 +153,8 @@
 //}
 
 
+
+
 ///click
 -(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     switch (indexPath.row) {
@@ -160,6 +170,7 @@
 //            break;
         case 2://modify nickname
         {
+            self.what = 2;
             ModifyNicknameViewController * modifyNicknameVc = [[ModifyNicknameViewController alloc] initWithNibName:@"ModifyNicknameViewController" bundle:nil];
             [self.navigationController pushViewController:modifyNicknameVc animated:YES];
         }
@@ -225,20 +236,35 @@
             break;
             
         case 6://modify phone
-            
+        {
+            ModifyPhoneViewController * modifyPhoneVc = [[ModifyPhoneViewController alloc] initWithNibName:@"ModifyPhoneViewController" bundle:nil];
+            [self.navigationController pushViewController:modifyPhoneVc animated:YES];
+        }
             break;
             
         case 7://modify mail
-            
+        {
+            ModifyEmailViewController * modifyEmailVc = [[ModifyEmailViewController alloc] initWithNibName:@"ModifyEmailViewController" bundle:nil];
+            [self.navigationController pushViewController:modifyEmailVc animated:YES];
+        }
             break;
         case 8://modify password
-            
+        {
+            ModifyPwdViewController * modifyPwdVc = [[ModifyPwdViewController alloc] initWithNibName:@"ModifyPwdViewController" bundle:nil];
+            [self.navigationController pushViewController:modifyPwdVc animated:YES];
+        }
             break;
         case 9://modify motto
-            
+        {
+            ModifyMottoViewController * modifyMottoVc = [[ModifyMottoViewController alloc] initWithNibName:@"ModifyMottoViewController" bundle:nil];
+            [self.navigationController pushViewController:modifyMottoVc animated:YES];
+        }
             break;
         case 10://modify introduction
-            
+        {
+            ModifyIntroViewController * modifyIntroVc = [[ModifyIntroViewController alloc] initWithNibName:@"ModifyIntroViewController" bundle:nil];
+            [self.navigationController pushViewController:modifyIntroVc animated:YES];
+        }
             break;
         default:
             
@@ -327,20 +353,21 @@
 
 - (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component{
     if (component == 0) {
-        return [[classes allKeys] count];
+        return [headClasses count];
     }else {
         NSInteger row = [pickerView selectedRowInComponent:0];
-        return [[classes objectForKey:[[classes allKeys] objectAtIndex:row]] count];
+        NSArray * tempArr = [classes objectForKey:[headClasses objectAtIndex:row]];
+        return [tempArr count];
     }
 }
 
 - (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component{
     if (0 == component) {
-        NSString * key = [[classes allKeys] objectAtIndex:row];
+        NSString * key = [headClasses objectAtIndex:row];
        return key;
     }else{
         NSInteger tempRow = [pickerView selectedRowInComponent:0];
-        NSArray * tempArr = [classes objectForKey:[[classes allKeys] objectAtIndex:tempRow]];
+        NSArray * tempArr = [classes objectForKey:[headClasses objectAtIndex:tempRow]];
         return tempArr[row];
     }
 }

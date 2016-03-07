@@ -19,6 +19,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+        self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:40 green:169 blue:97 alpha:1];
+    
     // Do any additional setup after loading the view.
     [personalHeadImage setUserInteractionEnabled:YES];
     UITapGestureRecognizer * singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(headImageTap)];

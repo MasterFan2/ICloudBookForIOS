@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF123DB71C8D5C7900B2F660 /* ModifyPwdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF123DB51C8D5C7900B2F660 /* ModifyPwdViewController.m */; };
+		AF123DB81C8D5C7900B2F660 /* ModifyPwdViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF123DB61C8D5C7900B2F660 /* ModifyPwdViewController.xib */; };
+		AF123DBC1C8D69FA00B2F660 /* ModifyIntroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF123DBA1C8D69FA00B2F660 /* ModifyIntroViewController.m */; };
+		AF123DBD1C8D69FA00B2F660 /* ModifyIntroViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF123DBB1C8D69FA00B2F660 /* ModifyIntroViewController.xib */; };
+		AF123DC11C8D771B00B2F660 /* ModifyMottoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF123DBF1C8D771B00B2F660 /* ModifyMottoViewController.m */; };
+		AF123DC21C8D771B00B2F660 /* ModifyMottoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF123DC01C8D771B00B2F660 /* ModifyMottoViewController.xib */; };
+		AF123DC61C8D79F400B2F660 /* ModifyPhoneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF123DC41C8D79F400B2F660 /* ModifyPhoneViewController.m */; };
+		AF123DC71C8D79F400B2F660 /* ModifyPhoneViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF123DC51C8D79F400B2F660 /* ModifyPhoneViewController.xib */; };
+		AF123DCB1C8D7A0300B2F660 /* ModifyEmailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF123DC91C8D7A0300B2F660 /* ModifyEmailViewController.m */; };
+		AF123DCC1C8D7A0300B2F660 /* ModifyEmailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF123DCA1C8D7A0300B2F660 /* ModifyEmailViewController.xib */; };
 		AF7BC77B1C88337200A03787 /* ProfileTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AF7BC7791C88337200A03787 /* ProfileTableViewCell.m */; };
 		AF7BC77C1C88337200A03787 /* ProfileTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF7BC77A1C88337200A03787 /* ProfileTableViewCell.xib */; };
 		AF7BC77E1C88376A00A03787 /* Profile.plist in Resources */ = {isa = PBXBuildFile; fileRef = AF7BC77D1C88376A00A03787 /* Profile.plist */; };
@@ -54,6 +64,21 @@
 /* Begin PBXFileReference section */
 		3D770E2A82A056E7D0FD5E25 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CC27450C18B072C7B3BFC51 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		AF123DB41C8D5C7900B2F660 /* ModifyPwdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModifyPwdViewController.h; sourceTree = "<group>"; };
+		AF123DB51C8D5C7900B2F660 /* ModifyPwdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModifyPwdViewController.m; sourceTree = "<group>"; };
+		AF123DB61C8D5C7900B2F660 /* ModifyPwdViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ModifyPwdViewController.xib; sourceTree = "<group>"; };
+		AF123DB91C8D69FA00B2F660 /* ModifyIntroViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModifyIntroViewController.h; sourceTree = "<group>"; };
+		AF123DBA1C8D69FA00B2F660 /* ModifyIntroViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModifyIntroViewController.m; sourceTree = "<group>"; };
+		AF123DBB1C8D69FA00B2F660 /* ModifyIntroViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ModifyIntroViewController.xib; sourceTree = "<group>"; };
+		AF123DBE1C8D771B00B2F660 /* ModifyMottoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModifyMottoViewController.h; sourceTree = "<group>"; };
+		AF123DBF1C8D771B00B2F660 /* ModifyMottoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModifyMottoViewController.m; sourceTree = "<group>"; };
+		AF123DC01C8D771B00B2F660 /* ModifyMottoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ModifyMottoViewController.xib; sourceTree = "<group>"; };
+		AF123DC31C8D79F400B2F660 /* ModifyPhoneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModifyPhoneViewController.h; sourceTree = "<group>"; };
+		AF123DC41C8D79F400B2F660 /* ModifyPhoneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModifyPhoneViewController.m; sourceTree = "<group>"; };
+		AF123DC51C8D79F400B2F660 /* ModifyPhoneViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ModifyPhoneViewController.xib; sourceTree = "<group>"; };
+		AF123DC81C8D7A0300B2F660 /* ModifyEmailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModifyEmailViewController.h; sourceTree = "<group>"; };
+		AF123DC91C8D7A0300B2F660 /* ModifyEmailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModifyEmailViewController.m; sourceTree = "<group>"; };
+		AF123DCA1C8D7A0300B2F660 /* ModifyEmailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ModifyEmailViewController.xib; sourceTree = "<group>"; };
 		AF7BC7781C88337200A03787 /* ProfileTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileTableViewCell.h; sourceTree = "<group>"; };
 		AF7BC7791C88337200A03787 /* ProfileTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileTableViewCell.m; sourceTree = "<group>"; };
 		AF7BC77A1C88337200A03787 /* ProfileTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileTableViewCell.xib; sourceTree = "<group>"; };
@@ -166,6 +191,9 @@
 		AF2C89931C8981EB00BD4AC1 /* ModifyPhone */ = {
 			isa = PBXGroup;
 			children = (
+				AF123DC31C8D79F400B2F660 /* ModifyPhoneViewController.h */,
+				AF123DC41C8D79F400B2F660 /* ModifyPhoneViewController.m */,
+				AF123DC51C8D79F400B2F660 /* ModifyPhoneViewController.xib */,
 			);
 			name = ModifyPhone;
 			sourceTree = "<group>";
@@ -173,6 +201,9 @@
 		AF2C89941C8981F800BD4AC1 /* ModifyMail */ = {
 			isa = PBXGroup;
 			children = (
+				AF123DC81C8D7A0300B2F660 /* ModifyEmailViewController.h */,
+				AF123DC91C8D7A0300B2F660 /* ModifyEmailViewController.m */,
+				AF123DCA1C8D7A0300B2F660 /* ModifyEmailViewController.xib */,
 			);
 			name = ModifyMail;
 			sourceTree = "<group>";
@@ -180,6 +211,9 @@
 		AF2C89951C89820900BD4AC1 /* ModifyPassword */ = {
 			isa = PBXGroup;
 			children = (
+				AF123DB41C8D5C7900B2F660 /* ModifyPwdViewController.h */,
+				AF123DB51C8D5C7900B2F660 /* ModifyPwdViewController.m */,
+				AF123DB61C8D5C7900B2F660 /* ModifyPwdViewController.xib */,
 			);
 			name = ModifyPassword;
 			sourceTree = "<group>";
@@ -187,6 +221,9 @@
 		AF2C89961C89821200BD4AC1 /* ModifyMotto */ = {
 			isa = PBXGroup;
 			children = (
+				AF123DBE1C8D771B00B2F660 /* ModifyMottoViewController.h */,
+				AF123DBF1C8D771B00B2F660 /* ModifyMottoViewController.m */,
+				AF123DC01C8D771B00B2F660 /* ModifyMottoViewController.xib */,
 			);
 			name = ModifyMotto;
 			sourceTree = "<group>";
@@ -194,6 +231,9 @@
 		AF2C89971C89826E00BD4AC1 /* ModifyIntroduction */ = {
 			isa = PBXGroup;
 			children = (
+				AF123DB91C8D69FA00B2F660 /* ModifyIntroViewController.h */,
+				AF123DBA1C8D69FA00B2F660 /* ModifyIntroViewController.m */,
+				AF123DBB1C8D69FA00B2F660 /* ModifyIntroViewController.xib */,
 			);
 			name = ModifyIntroduction;
 			sourceTree = "<group>";
@@ -548,14 +588,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				E37A68811C8AC4EE0013395E /* ModifyNicknameViewController.xib in Resources */,
+				AF123DC71C8D79F400B2F660 /* ModifyPhoneViewController.xib in Resources */,
 				AF989E151C86E3340014BD77 /* ProfileViewController.xib in Resources */,
 				AF7BC77E1C88376A00A03787 /* Profile.plist in Resources */,
+				AF123DB81C8D5C7900B2F660 /* ModifyPwdViewController.xib in Resources */,
 				AF989E101C86E1250014BD77 /* WorkManagementViewController.xib in Resources */,
+				AF123DBD1C8D69FA00B2F660 /* ModifyIntroViewController.xib in Resources */,
 				E3310A5B1C81FB8900D629F8 /* LaunchScreen.storyboard in Resources */,
+				AF123DCC1C8D7A0300B2F660 /* ModifyEmailViewController.xib in Resources */,
 				AFC163D81C85948E002E4F3B /* SigninViewController.xib in Resources */,
 				E3310A581C81FB8900D629F8 /* Assets.xcassets in Resources */,
 				AF7BC77C1C88337200A03787 /* ProfileTableViewCell.xib in Resources */,
 				E3310A561C81FB8900D629F8 /* Main.storyboard in Resources */,
+				AF123DC21C8D771B00B2F660 /* ModifyMottoViewController.xib in Resources */,
 				AFC163D21C8441D9002E4F3B /* MTFCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -635,8 +680,13 @@
 				AF7BC77B1C88337200A03787 /* ProfileTableViewCell.m in Sources */,
 				E3310A4D1C81FB8900D629F8 /* AppDelegate.m in Sources */,
 				AF989E141C86E3340014BD77 /* ProfileViewController.m in Sources */,
+				AF123DB71C8D5C7900B2F660 /* ModifyPwdViewController.m in Sources */,
+				AF123DC61C8D79F400B2F660 /* ModifyPhoneViewController.m in Sources */,
 				E3310A501C81FB8900D629F8 /* ReadViewController.m in Sources */,
+				AF123DCB1C8D7A0300B2F660 /* ModifyEmailViewController.m in Sources */,
 				AF989E0F1C86E1250014BD77 /* WorkManagementViewController.m in Sources */,
+				AF123DC11C8D771B00B2F660 /* ModifyMottoViewController.m in Sources */,
+				AF123DBC1C8D69FA00B2F660 /* ModifyIntroViewController.m in Sources */,
 				E3310A851C8201BA00D629F8 /* ManagementViewController.m in Sources */,
 				AFC163D11C8441D9002E4F3B /* MTFCollectionViewCell.m in Sources */,
 				E37A68801C8AC4EE0013395E /* ModifyNicknameViewController.m in Sources */,

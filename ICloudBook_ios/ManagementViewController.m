@@ -17,6 +17,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+        self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:40 green:169 blue:97 alpha:1];
+    
     // Do any additional setup after loading the view.
     //init list
     listData = [[NSArray alloc] initWithObjects:@"阅读情况统计", @"图书阅读情况管理", @"用户阅读情况管理", @"用户账号管理", @"上传图书审核管理", @"图书综合数据管理", @"班级阅读情况管理", nil];

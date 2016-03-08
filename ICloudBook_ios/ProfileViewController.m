@@ -108,34 +108,36 @@
     if (cell == nil) {
         if ([type compare:[NSNumber numberWithInt:0]] == NSOrderedSame) {       ///0.normal
             cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:identifier];
-            cell.detailTextLabel.text = tempDict[@"value"];
-            
         } else if ([type compare:[NSNumber numberWithInt:1]] == NSOrderedSame) {///1.arrow
             cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:identifier];
             cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-            cell.detailTextLabel.text = tempDict[@"value"];
-            
         } else if ([type compare:[NSNumber numberWithInt:2]] == NSOrderedSame) {///2.head picture
             cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:identifier];
-            UIImageView * headImg = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"person_head_img"]];
-            [headImg setFrame:CGRectMake(0, 0, 45, 45)];
-            [headImg setTag:909];
-            
-            cell.accessoryView = headImg;
-            
-            cell.accessoryType=UITableViewCellAccessoryNone;
-            
         } else if ([type compare:[NSNumber numberWithInt:3]] == NSOrderedSame) {///3.single label
             cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:identifier];
             cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-            cell.detailTextLabel.text = tempDict[@"value"];
-            
         } else {///4                                                            ///4.double labels.
             cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:identifier];
-            cell.detailTextLabel.text = tempDict[@"value"];
-            cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
         }
+    }
+    
+    if ([type compare:[NSNumber numberWithInt:0]] == NSOrderedSame) {      ///0.normal
+        cell.detailTextLabel.text = tempDict[@"value"];
+    }else if ([type compare:[NSNumber numberWithInt:1]] == NSOrderedSame) {///1.arrow
+        cell.detailTextLabel.text = tempDict[@"value"];
+    }else if ([type compare:[NSNumber numberWithInt:2]] == NSOrderedSame) {///2.head picture
+        UIImageView * headImg = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"person_head_img"]];
+        [headImg setFrame:CGRectMake(0, 0, 45, 45)];
+        [headImg setTag:909];
         
+        cell.accessoryView = headImg;
+        
+        cell.accessoryType=UITableViewCellAccessoryNone;
+    }else if ([type compare:[NSNumber numberWithInt:3]] == NSOrderedSame) {///3.single label
+        cell.detailTextLabel.text = tempDict[@"value"];
+    }else {
+        cell.detailTextLabel.text = tempDict[@"value"];
+        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     }
     
     cell.textLabel.text = tempDict[@"label"];

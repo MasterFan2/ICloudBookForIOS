@@ -5,8 +5,12 @@
 //  Created by MasterFan on 16/2/28.
 //  Copyright © 2016年 MasterFan. All rights reserved.
 //
-#import "ProfileViewController.h"
+
 #import "PersonalViewController.h"
+
+#import "WorkManagementViewController.h"
+#import "ProfileViewController.h"
+#import "BookFriendViewController.h"
 
 @interface PersonalViewController ()
 
@@ -104,7 +108,14 @@
 
 
 -(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    
+    NSInteger row = indexPath.row;
+    if (row == 0) {
+        WorkManagementViewController * workManaementVc = [[WorkManagementViewController alloc] initWithNibName:@"WorkManagementViewController" bundle:nil];
+        [self.navigationController pushViewController:workManaementVc animated:YES];
+    } else if (row == 3) {
+        BookFriendViewController * bookFriendVc = [[BookFriendViewController alloc] initWithNibName:@"BookFriendViewController" bundle:nil];
+        [self.navigationController pushViewController:bookFriendVc animated:YES];
+    }
 }
 
 @end

@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface WorkManagementViewController : UIViewController
+@interface WorkManagementViewController : UIViewController <UITableViewDelegate, UITableViewDataSource> {
+    
+    __weak IBOutlet UITableView *managerTableView;
+}
 
 @end

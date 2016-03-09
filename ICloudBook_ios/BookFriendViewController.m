@@ -1,28 +1,27 @@
 //
-//  WorkManagementViewController.m
+//  BookFriendViewController.m
 //  ICloudBook_ios
 //
-//  Created by 范国强 on 16/3/2.
+//  Created by MasterFan on 16/3/9.
 //  Copyright © 2016年 MasterFan. All rights reserved.
 //
 
-#import "WorkManagementViewController.h"
-#import "ManagementTableViewCell.h"
+#import "BookFriendViewController.h"
+#define IDENTIFIER @"bookFriendIdentifier"
 
-#define IDENTIFIER @"managementIdentifier"
-
-@interface WorkManagementViewController ()
+@interface BookFriendViewController ()
 
 @end
 
-@implementation WorkManagementViewController
-
+@implementation BookFriendViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    self.title = @"作品管理";
-    [managerTableView registerNib:[UINib nibWithNibName:@"ManagementTableViewCell" bundle:nil] forCellReuseIdentifier:IDENTIFIER];
+    
+    self.title = @"我的书友";
+    
+    [bookFriendTableView registerNib:[UINib nibWithNibName:@"BookFriendTableViewCell" bundle:nil] forCellReuseIdentifier:IDENTIFIER];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -47,7 +46,7 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 140.0;
+    return 130.0;
 }
 
 // Row display. Implementers should *always* try to reuse cells by setting each cell's reuseIdentifier and querying for available reusable cells with dequeueReusableCellWithIdentifier:
@@ -56,6 +55,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:IDENTIFIER];
+    
     
     return cell;
 }

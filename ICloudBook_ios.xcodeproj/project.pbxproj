@@ -29,6 +29,16 @@
 		AFC163D71C85948E002E4F3B /* SigninViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFC163D51C85948E002E4F3B /* SigninViewController.m */; };
 		AFC163D81C85948E002E4F3B /* SigninViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFC163D61C85948E002E4F3B /* SigninViewController.xib */; };
 		C639B2A4C7B40B52611F1297 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D770E2A82A056E7D0FD5E25 /* libPods.a */; };
+		E31CF9861C9063EE001C91A9 /* UploadBookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E31CF9841C9063EE001C91A9 /* UploadBookViewController.m */; };
+		E31CF9871C9063EE001C91A9 /* UploadBookViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E31CF9851C9063EE001C91A9 /* UploadBookViewController.xib */; };
+		E31CF98B1C906734001C91A9 /* MyCommentsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E31CF9891C906734001C91A9 /* MyCommentsViewController.m */; };
+		E31CF98C1C906734001C91A9 /* MyCommentsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E31CF98A1C906734001C91A9 /* MyCommentsViewController.xib */; };
+		E31CF9901C90675D001C91A9 /* BookFriendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E31CF98E1C90675D001C91A9 /* BookFriendViewController.m */; };
+		E31CF9911C90675D001C91A9 /* BookFriendViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E31CF98F1C90675D001C91A9 /* BookFriendViewController.xib */; };
+		E31CF9961C906957001C91A9 /* BookFriendTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E31CF9941C906957001C91A9 /* BookFriendTableViewCell.m */; };
+		E31CF9971C906957001C91A9 /* BookFriendTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E31CF9951C906957001C91A9 /* BookFriendTableViewCell.xib */; };
+		E31CF99C1C907A25001C91A9 /* ManagementTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E31CF99A1C907A25001C91A9 /* ManagementTableViewCell.m */; };
+		E31CF99D1C907A25001C91A9 /* ManagementTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E31CF99B1C907A25001C91A9 /* ManagementTableViewCell.xib */; };
 		E3310A4A1C81FB8900D629F8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E3310A491C81FB8900D629F8 /* main.m */; };
 		E3310A4D1C81FB8900D629F8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E3310A4C1C81FB8900D629F8 /* AppDelegate.m */; };
 		E3310A501C81FB8900D629F8 /* ReadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3310A4F1C81FB8900D629F8 /* ReadViewController.m */; };
@@ -96,6 +106,21 @@
 		AFC163D51C85948E002E4F3B /* SigninViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SigninViewController.m; sourceTree = "<group>"; };
 		AFC163D61C85948E002E4F3B /* SigninViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SigninViewController.xib; sourceTree = "<group>"; };
 		D9A385BE2AE96AB1DDEE65BC /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		E31CF9831C9063EE001C91A9 /* UploadBookViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UploadBookViewController.h; sourceTree = "<group>"; };
+		E31CF9841C9063EE001C91A9 /* UploadBookViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UploadBookViewController.m; sourceTree = "<group>"; };
+		E31CF9851C9063EE001C91A9 /* UploadBookViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UploadBookViewController.xib; sourceTree = "<group>"; };
+		E31CF9881C906734001C91A9 /* MyCommentsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCommentsViewController.h; sourceTree = "<group>"; };
+		E31CF9891C906734001C91A9 /* MyCommentsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCommentsViewController.m; sourceTree = "<group>"; };
+		E31CF98A1C906734001C91A9 /* MyCommentsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyCommentsViewController.xib; sourceTree = "<group>"; };
+		E31CF98D1C90675D001C91A9 /* BookFriendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookFriendViewController.h; sourceTree = "<group>"; };
+		E31CF98E1C90675D001C91A9 /* BookFriendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookFriendViewController.m; sourceTree = "<group>"; };
+		E31CF98F1C90675D001C91A9 /* BookFriendViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BookFriendViewController.xib; sourceTree = "<group>"; };
+		E31CF9931C906957001C91A9 /* BookFriendTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookFriendTableViewCell.h; sourceTree = "<group>"; };
+		E31CF9941C906957001C91A9 /* BookFriendTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookFriendTableViewCell.m; sourceTree = "<group>"; };
+		E31CF9951C906957001C91A9 /* BookFriendTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BookFriendTableViewCell.xib; sourceTree = "<group>"; };
+		E31CF9991C907A25001C91A9 /* ManagementTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ManagementTableViewCell.h; sourceTree = "<group>"; };
+		E31CF99A1C907A25001C91A9 /* ManagementTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ManagementTableViewCell.m; sourceTree = "<group>"; };
+		E31CF99B1C907A25001C91A9 /* ManagementTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ManagementTableViewCell.xib; sourceTree = "<group>"; };
 		E3310A451C81FB8900D629F8 /* ICloudBook_ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ICloudBook_ios.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3310A491C81FB8900D629F8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E3310A4B1C81FB8900D629F8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -272,6 +297,7 @@
 		AF989E061C86DDE20014BD77 /* WorkManagement */ = {
 			isa = PBXGroup;
 			children = (
+				E31CF9981C907A02001C91A9 /* cell */,
 				AF989E0C1C86E1250014BD77 /* WorkManagementViewController.h */,
 				AF989E0D1C86E1250014BD77 /* WorkManagementViewController.m */,
 				AF989E0E1C86E1250014BD77 /* WorkManagementViewController.xib */,
@@ -282,6 +308,9 @@
 		AF989E071C86DE8A0014BD77 /* MyComments */ = {
 			isa = PBXGroup;
 			children = (
+				E31CF9881C906734001C91A9 /* MyCommentsViewController.h */,
+				E31CF9891C906734001C91A9 /* MyCommentsViewController.m */,
+				E31CF98A1C906734001C91A9 /* MyCommentsViewController.xib */,
 			);
 			name = MyComments;
 			sourceTree = "<group>";
@@ -289,6 +318,9 @@
 		AF989E081C86DE940014BD77 /* UploadBook */ = {
 			isa = PBXGroup;
 			children = (
+				E31CF9831C9063EE001C91A9 /* UploadBookViewController.h */,
+				E31CF9841C9063EE001C91A9 /* UploadBookViewController.m */,
+				E31CF9851C9063EE001C91A9 /* UploadBookViewController.xib */,
 			);
 			name = UploadBook;
 			sourceTree = "<group>";
@@ -303,6 +335,10 @@
 		AF989E0A1C86DEAD0014BD77 /* BookFriend */ = {
 			isa = PBXGroup;
 			children = (
+				E31CF9921C906935001C91A9 /* cell */,
+				E31CF98D1C90675D001C91A9 /* BookFriendViewController.h */,
+				E31CF98E1C90675D001C91A9 /* BookFriendViewController.m */,
+				E31CF98F1C90675D001C91A9 /* BookFriendViewController.xib */,
 			);
 			name = BookFriend;
 			sourceTree = "<group>";
@@ -332,6 +368,26 @@
 				AFC163D61C85948E002E4F3B /* SigninViewController.xib */,
 			);
 			name = Login;
+			sourceTree = "<group>";
+		};
+		E31CF9921C906935001C91A9 /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				E31CF9931C906957001C91A9 /* BookFriendTableViewCell.h */,
+				E31CF9941C906957001C91A9 /* BookFriendTableViewCell.m */,
+				E31CF9951C906957001C91A9 /* BookFriendTableViewCell.xib */,
+			);
+			name = cell;
+			sourceTree = "<group>";
+		};
+		E31CF9981C907A02001C91A9 /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				E31CF9991C907A25001C91A9 /* ManagementTableViewCell.h */,
+				E31CF99A1C907A25001C91A9 /* ManagementTableViewCell.m */,
+				E31CF99B1C907A25001C91A9 /* ManagementTableViewCell.xib */,
+			);
+			name = cell;
 			sourceTree = "<group>";
 		};
 		E3310A3C1C81FB8900D629F8 = {
@@ -588,8 +644,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				E37A68811C8AC4EE0013395E /* ModifyNicknameViewController.xib in Resources */,
+				E31CF9971C906957001C91A9 /* BookFriendTableViewCell.xib in Resources */,
 				AF123DC71C8D79F400B2F660 /* ModifyPhoneViewController.xib in Resources */,
 				AF989E151C86E3340014BD77 /* ProfileViewController.xib in Resources */,
+				E31CF99D1C907A25001C91A9 /* ManagementTableViewCell.xib in Resources */,
 				AF7BC77E1C88376A00A03787 /* Profile.plist in Resources */,
 				AF123DB81C8D5C7900B2F660 /* ModifyPwdViewController.xib in Resources */,
 				AF989E101C86E1250014BD77 /* WorkManagementViewController.xib in Resources */,
@@ -599,9 +657,12 @@
 				AFC163D81C85948E002E4F3B /* SigninViewController.xib in Resources */,
 				E3310A581C81FB8900D629F8 /* Assets.xcassets in Resources */,
 				AF7BC77C1C88337200A03787 /* ProfileTableViewCell.xib in Resources */,
+				E31CF9871C9063EE001C91A9 /* UploadBookViewController.xib in Resources */,
 				E3310A561C81FB8900D629F8 /* Main.storyboard in Resources */,
 				AF123DC21C8D771B00B2F660 /* ModifyMottoViewController.xib in Resources */,
+				E31CF98C1C906734001C91A9 /* MyCommentsViewController.xib in Resources */,
 				AFC163D21C8441D9002E4F3B /* MTFCollectionViewCell.xib in Resources */,
+				E31CF9911C90675D001C91A9 /* BookFriendViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -676,6 +737,7 @@
 			files = (
 				AFC163D71C85948E002E4F3B /* SigninViewController.m in Sources */,
 				E3310A881C8201C700D629F8 /* PersonalViewController.m in Sources */,
+				E31CF98B1C906734001C91A9 /* MyCommentsViewController.m in Sources */,
 				E3310A531C81FB8900D629F8 /* CoursewareViewController.m in Sources */,
 				AF7BC77B1C88337200A03787 /* ProfileTableViewCell.m in Sources */,
 				E3310A4D1C81FB8900D629F8 /* AppDelegate.m in Sources */,
@@ -683,14 +745,18 @@
 				AF123DB71C8D5C7900B2F660 /* ModifyPwdViewController.m in Sources */,
 				AF123DC61C8D79F400B2F660 /* ModifyPhoneViewController.m in Sources */,
 				E3310A501C81FB8900D629F8 /* ReadViewController.m in Sources */,
+				E31CF99C1C907A25001C91A9 /* ManagementTableViewCell.m in Sources */,
 				AF123DCB1C8D7A0300B2F660 /* ModifyEmailViewController.m in Sources */,
 				AF989E0F1C86E1250014BD77 /* WorkManagementViewController.m in Sources */,
 				AF123DC11C8D771B00B2F660 /* ModifyMottoViewController.m in Sources */,
+				E31CF9861C9063EE001C91A9 /* UploadBookViewController.m in Sources */,
 				AF123DBC1C8D69FA00B2F660 /* ModifyIntroViewController.m in Sources */,
+				E31CF9901C90675D001C91A9 /* BookFriendViewController.m in Sources */,
 				E3310A851C8201BA00D629F8 /* ManagementViewController.m in Sources */,
 				AFC163D11C8441D9002E4F3B /* MTFCollectionViewCell.m in Sources */,
 				E37A68801C8AC4EE0013395E /* ModifyNicknameViewController.m in Sources */,
 				E3310A4A1C81FB8900D629F8 /* main.m in Sources */,
+				E31CF9961C906957001C91A9 /* BookFriendTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

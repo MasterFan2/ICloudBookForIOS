@@ -16,13 +16,13 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="输入邮箱" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tyi-b4-mlJ">
-                    <rect key="frame" x="9" y="49" width="304" height="30"/>
+                    <rect key="frame" x="9" y="86" width="304" height="30"/>
                     <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fkQ-eU-Bew">
-                    <rect key="frame" x="34" y="134" width="252" height="30"/>
+                    <rect key="frame" x="34" y="161" width="252" height="30"/>
                     <color key="backgroundColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                     <state key="normal" title="修改">
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

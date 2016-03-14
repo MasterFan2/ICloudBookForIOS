@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UploadBookViewController : UIViewController
+@interface UploadBookViewController : UIViewController<UITableViewDataSource, UITableViewDelegate> {
+    
+    __weak IBOutlet UITableView *uploadedTableView;
+}
 
 @end

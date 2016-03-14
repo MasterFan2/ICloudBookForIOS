@@ -24,6 +24,8 @@
 		AF989E101C86E1250014BD77 /* WorkManagementViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF989E0E1C86E1250014BD77 /* WorkManagementViewController.xib */; };
 		AF989E141C86E3340014BD77 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF989E121C86E3340014BD77 /* ProfileViewController.m */; };
 		AF989E151C86E3340014BD77 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF989E131C86E3340014BD77 /* ProfileViewController.xib */; };
+		AFAA3E8F1C96C3730096E650 /* UploadBookTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AFAA3E8D1C96C3730096E650 /* UploadBookTableViewCell.m */; };
+		AFAA3E901C96C3730096E650 /* UploadBookTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFAA3E8E1C96C3730096E650 /* UploadBookTableViewCell.xib */; };
 		AFC163D11C8441D9002E4F3B /* MTFCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AFC163CF1C8441D9002E4F3B /* MTFCollectionViewCell.m */; };
 		AFC163D21C8441D9002E4F3B /* MTFCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFC163D01C8441D9002E4F3B /* MTFCollectionViewCell.xib */; };
 		AFC163D71C85948E002E4F3B /* SigninViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFC163D51C85948E002E4F3B /* SigninViewController.m */; };
@@ -99,6 +101,9 @@
 		AF989E111C86E3340014BD77 /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
 		AF989E121C86E3340014BD77 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
 		AF989E131C86E3340014BD77 /* ProfileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
+		AFAA3E8C1C96C3730096E650 /* UploadBookTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UploadBookTableViewCell.h; sourceTree = "<group>"; };
+		AFAA3E8D1C96C3730096E650 /* UploadBookTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UploadBookTableViewCell.m; sourceTree = "<group>"; };
+		AFAA3E8E1C96C3730096E650 /* UploadBookTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UploadBookTableViewCell.xib; sourceTree = "<group>"; };
 		AFC163CE1C8441D9002E4F3B /* MTFCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTFCollectionViewCell.h; sourceTree = "<group>"; };
 		AFC163CF1C8441D9002E4F3B /* MTFCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTFCollectionViewCell.m; sourceTree = "<group>"; };
 		AFC163D01C8441D9002E4F3B /* MTFCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MTFCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -318,6 +323,7 @@
 		AF989E081C86DE940014BD77 /* UploadBook */ = {
 			isa = PBXGroup;
 			children = (
+				AFAA3E8B1C96C34B0096E650 /* cell */,
 				E31CF9831C9063EE001C91A9 /* UploadBookViewController.h */,
 				E31CF9841C9063EE001C91A9 /* UploadBookViewController.m */,
 				E31CF9851C9063EE001C91A9 /* UploadBookViewController.xib */,
@@ -348,6 +354,16 @@
 			children = (
 			);
 			name = MyNote;
+			sourceTree = "<group>";
+		};
+		AFAA3E8B1C96C34B0096E650 /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				AFAA3E8C1C96C3730096E650 /* UploadBookTableViewCell.h */,
+				AFAA3E8D1C96C3730096E650 /* UploadBookTableViewCell.m */,
+				AFAA3E8E1C96C3730096E650 /* UploadBookTableViewCell.xib */,
+			);
+			name = cell;
 			sourceTree = "<group>";
 		};
 		AFC163CD1C844199002E4F3B /* custom */ = {
@@ -650,6 +666,7 @@
 				E31CF99D1C907A25001C91A9 /* ManagementTableViewCell.xib in Resources */,
 				AF7BC77E1C88376A00A03787 /* Profile.plist in Resources */,
 				AF123DB81C8D5C7900B2F660 /* ModifyPwdViewController.xib in Resources */,
+				AFAA3E901C96C3730096E650 /* UploadBookTableViewCell.xib in Resources */,
 				AF989E101C86E1250014BD77 /* WorkManagementViewController.xib in Resources */,
 				AF123DBD1C8D69FA00B2F660 /* ModifyIntroViewController.xib in Resources */,
 				E3310A5B1C81FB8900D629F8 /* LaunchScreen.storyboard in Resources */,
@@ -755,6 +772,7 @@
 				E3310A851C8201BA00D629F8 /* ManagementViewController.m in Sources */,
 				AFC163D11C8441D9002E4F3B /* MTFCollectionViewCell.m in Sources */,
 				E37A68801C8AC4EE0013395E /* ModifyNicknameViewController.m in Sources */,
+				AFAA3E8F1C96C3730096E650 /* UploadBookTableViewCell.m in Sources */,
 				E3310A4A1C81FB8900D629F8 /* main.m in Sources */,
 				E31CF9961C906957001C91A9 /* BookFriendTableViewCell.m in Sources */,
 			);

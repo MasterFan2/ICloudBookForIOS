@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="184" id="KGk-i7-Jjw" customClass="UploadBookTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="344" height="184"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="344" height="183"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="test_book" translatesAutoresizingMaskIntoConstraints="NO" id="pig-xw-Sz1">
+                        <rect key="frame" x="0.0" y="0.0" width="116" height="183"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="116" id="U6J-jY-OmP"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="西游记" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V5D-7C-Svq">
+                        <rect key="frame" x="124" y="8" width="51" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="N28-Sr-DAY"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="吴承恩" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6XH-w3-vej">
+                        <rect key="frame" x="124" y="37" width="36" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="H9z-xw-dyt"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="作为中国古典四大名著之一、中国古代第一部浪漫主义长篇神魔小说，该书深刻描绘了社会现实，是魔幻现实主义的开创作品。主要描写了孙悟空、猪八戒、沙僧三人保护唐僧西行取经，唐僧从投胎到取经八十一受难，一路降妖伏魔，九九归一，终于上了西天见到如来佛祖" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KNk-yW-Vka">
+                        <rect key="frame" x="124" y="56" width="220" height="71"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="71" id="kQi-uE-CdC"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Dz-Vi-7DS">
+                        <rect key="frame" x="129" y="145" width="72" height="30"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="PWe-V0-jhh"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <state key="normal" title="中国古典名著">
+                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="状态:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XSF-rS-2Oe">
+                        <rect key="frame" x="221" y="154" width="33" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="tT3-Gf-fkT"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="已通过" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="buM-3K-pgY">
+                        <rect key="frame" x="255" y="154" width="42" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="BQR-UA-FM2"/>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="RIQ-Mp-eSx"/>
+                            <constraint firstAttribute="width" constant="42" id="xYx-rr-pG1"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.39990100340000001" green="0.88461223820000001" blue="0.2369320855" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="6XH-w3-vej" firstAttribute="top" secondItem="V5D-7C-Svq" secondAttribute="bottom" constant="8" id="2kQ-EU-gJc"/>
+                    <constraint firstItem="pig-xw-Sz1" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-8" id="4hL-Vh-puW"/>
+                    <constraint firstItem="V5D-7C-Svq" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="4op-yQ-Cuc"/>
+                    <constraint firstItem="KNk-yW-Vka" firstAttribute="top" secondItem="V5D-7C-Svq" secondAttribute="bottom" constant="27" id="61e-Sf-DJF"/>
+                    <constraint firstItem="1Dz-Vi-7DS" firstAttribute="leading" secondItem="pig-xw-Sz1" secondAttribute="trailing" constant="13" id="7bw-JT-NWm"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="pig-xw-Sz1" secondAttribute="bottom" constant="-8" id="AWu-En-vaM"/>
+                    <constraint firstItem="1Dz-Vi-7DS" firstAttribute="bottom" secondItem="H2p-sc-9uM" secondAttribute="bottomMargin" id="BjN-C7-Q0K"/>
+                    <constraint firstItem="6XH-w3-vej" firstAttribute="leading" secondItem="pig-xw-Sz1" secondAttribute="trailing" constant="8" id="DDb-M0-6QY"/>
+                    <constraint firstItem="buM-3K-pgY" firstAttribute="leading" secondItem="XSF-rS-2Oe" secondAttribute="trailing" constant="1" id="DK1-Eb-Gm3"/>
+                    <constraint firstItem="XSF-rS-2Oe" firstAttribute="bottom" secondItem="H2p-sc-9uM" secondAttribute="bottomMargin" id="Fzi-KX-9CN"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="KNk-yW-Vka" secondAttribute="trailing" constant="-8" id="PuL-sK-Sd2"/>
+                    <constraint firstItem="pig-xw-Sz1" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-8" id="QHF-hN-CQU"/>
+                    <constraint firstItem="KNk-yW-Vka" firstAttribute="leading" secondItem="pig-xw-Sz1" secondAttribute="trailing" constant="8" id="QrA-BX-tbf"/>
+                    <constraint firstItem="V5D-7C-Svq" firstAttribute="leading" secondItem="pig-xw-Sz1" secondAttribute="trailing" constant="8" id="hPV-ed-Uwd"/>
+                    <constraint firstItem="buM-3K-pgY" firstAttribute="bottom" secondItem="H2p-sc-9uM" secondAttribute="bottomMargin" id="jJJ-9V-n0L"/>
+                    <constraint firstItem="XSF-rS-2Oe" firstAttribute="leading" secondItem="1Dz-Vi-7DS" secondAttribute="trailing" constant="20" id="jlo-0x-ODQ"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="autherLabel" destination="6XH-w3-vej" id="rgI-xg-pqv"/>
+                <outlet property="bookNameLabel" destination="V5D-7C-Svq" id="D8y-Lm-v2B"/>
+                <outlet property="descriptionLabel" destination="KNk-yW-Vka" id="SI1-93-fL4"/>
+                <outlet property="headImageView" destination="pig-xw-Sz1" id="jUp-NH-qs1"/>
+                <outlet property="typeButton" destination="1Dz-Vi-7DS" id="L3Y-Pj-kkz"/>
+                <outlet property="verifyStatusLabel" destination="buM-3K-pgY" id="pf6-l4-fRD"/>
+            </connections>
+            <point key="canvasLocation" x="257" y="385"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="test_book" width="159" height="226"/>
+    </resources>
+</document>

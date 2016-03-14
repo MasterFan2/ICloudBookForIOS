@@ -10,6 +10,7 @@
 
 #import "WorkManagementViewController.h"
 #import "ProfileViewController.h"
+#import "UploadBookViewController.h"
 #import "BookFriendViewController.h"
 
 @interface PersonalViewController ()
@@ -115,6 +116,9 @@
     } else if (row == 3) {
         BookFriendViewController * bookFriendVc = [[BookFriendViewController alloc] initWithNibName:@"BookFriendViewController" bundle:nil];
         [self.navigationController pushViewController:bookFriendVc animated:YES];
+    }else if (row == 1) {
+        UploadBookViewController * uploadBookVc = [[UploadBookViewController alloc]initWithNibName:@"UploadBookViewController" bundle:nil];
+        [self.navigationController pushViewController:uploadBookVc animated:YES];
     }
 }
 

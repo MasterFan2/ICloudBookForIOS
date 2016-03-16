@@ -97,6 +97,7 @@
 		AF123DC81C8D7A0300B2F660 /* ModifyEmailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModifyEmailViewController.h; sourceTree = "<group>"; };
 		AF123DC91C8D7A0300B2F660 /* ModifyEmailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModifyEmailViewController.m; sourceTree = "<group>"; };
 		AF123DCA1C8D7A0300B2F660 /* ModifyEmailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ModifyEmailViewController.xib; sourceTree = "<group>"; };
+		AF64F6BF1C990102000D2A89 /* Http.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Http.h; sourceTree = "<group>"; };
 		AF7BC7781C88337200A03787 /* ProfileTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileTableViewCell.h; sourceTree = "<group>"; };
 		AF7BC7791C88337200A03787 /* ProfileTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileTableViewCell.m; sourceTree = "<group>"; };
 		AF7BC77A1C88337200A03787 /* ProfileTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileTableViewCell.xib; sourceTree = "<group>"; };
@@ -281,6 +282,14 @@
 				AF123DBB1C8D69FA00B2F660 /* ModifyIntroViewController.xib */,
 			);
 			name = ModifyIntroduction;
+			sourceTree = "<group>";
+		};
+		AF64F6BE1C98FFE6000D2A89 /* Http */ = {
+			isa = PBXGroup;
+			children = (
+				AF64F6BF1C990102000D2A89 /* Http.h */,
+			);
+			name = Http;
 			sourceTree = "<group>";
 		};
 		AF7BC7771C88334100A03787 /* cell */ = {
@@ -471,6 +480,7 @@
 		E3310A471C81FB8900D629F8 /* ICloudBook_ios */ = {
 			isa = PBXGroup;
 			children = (
+				AF64F6BE1C98FFE6000D2A89 /* Http */,
 				AFC163D31C859448002E4F3B /* Login */,
 				E3C3E95C1C8286E300F233AB /* Other */,
 				E3C3E95B1C8286CC00F233AB /* Launch */,

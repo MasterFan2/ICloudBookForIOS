@@ -10,11 +10,9 @@
 
 @interface SigninViewController : UIViewController
 {
-
-    __weak IBOutlet UISegmentedControl *chooseSegment;
     __weak IBOutlet UITextField *nameTextField;
     __weak IBOutlet UITextField *passwordTextField;
-    __weak IBOutlet UIButton *signinButton;
+    __weak IBOutlet UIButton    *signinButton;
 }
 
 @end

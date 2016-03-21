@@ -7,12 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MBProgressHUD.h>
+#import "GradeResp.h"
 
 @interface SigninViewController : UIViewController
 {
     __weak IBOutlet UITextField *nameTextField;
     __weak IBOutlet UITextField *passwordTextField;
     __weak IBOutlet UIButton    *signinButton;
+    GradeResp * gradeResp;
 }
+
+@property (nonatomic, retain) MBProgressHUD * progress;
 
 @end

@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MyCommentsViewController : UIViewController
+@interface MyCommentsViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>{
+    
+    __weak IBOutlet UITableView *myCommentTableView;
+}
 
 @end

@@ -1,25 +1,24 @@
 //
-//  MyCommentsViewController.m
+//  MessageCenterViewController.m
 //  ICloudBook_ios
 //
-//  Created by MasterFan on 16/3/9.
+//  Created by 范国强 on 16/3/15.
 //  Copyright © 2016年 MasterFan. All rights reserved.
 //
 
-#import "MyCommentsViewController.h"
+#import "MessageCenterViewController.h"
 
-@interface MyCommentsViewController ()
+@interface MessageCenterViewController ()
 
 @end
 
-@implementation MyCommentsViewController
+@implementation MessageCenterViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    self.title = @"我的评论";
-    [myCommentTableView registerNib:[UINib nibWithNibName:@"MyCommentsTableViewCell" bundle:nil] forCellReuseIdentifier:@"mycommentsIdentifier"];
-    
+    self.title = @"消息中心";
+    [messageCenterTableView registerNib:[UINib nibWithNibName:@"MessageCenterTableViewCell" bundle:nil] forCellReuseIdentifier:@"messageCenterIdentifier"];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -34,14 +33,14 @@
 
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 150.0;
+    return 95.0;
 }
 
 // Row display. Implementers should *always* try to reuse cells by setting each cell's reuseIdentifier and querying for available reusable cells with dequeueReusableCellWithIdentifier:
 // Cell gets various attributes set automatically based on table (separators) and data source (accessory views, editing controls)
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:@"mycommentsIdentifier"];
+    UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:@"messageCenterIdentifier"];
     
     return cell;
 }

@@ -17,6 +17,9 @@
 		AF123DC71C8D79F400B2F660 /* ModifyPhoneViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF123DC51C8D79F400B2F660 /* ModifyPhoneViewController.xib */; };
 		AF123DCB1C8D7A0300B2F660 /* ModifyEmailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF123DC91C8D7A0300B2F660 /* ModifyEmailViewController.m */; };
 		AF123DCC1C8D7A0300B2F660 /* ModifyEmailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF123DCA1C8D7A0300B2F660 /* ModifyEmailViewController.xib */; };
+		AF1394D11C9FE52D00DE2B1C /* Grade.m in Sources */ = {isa = PBXBuildFile; fileRef = AF1394D01C9FE52D00DE2B1C /* Grade.m */; };
+		AF1394D41C9FE6BD00DE2B1C /* GradeResp.m in Sources */ = {isa = PBXBuildFile; fileRef = AF1394D31C9FE6BD00DE2B1C /* GradeResp.m */; };
+		AF1394D81C9FEDA100DE2B1C /* MXPullDownMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = AF1394D71C9FEDA100DE2B1C /* MXPullDownMenu.m */; };
 		AF7BC77B1C88337200A03787 /* ProfileTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AF7BC7791C88337200A03787 /* ProfileTableViewCell.m */; };
 		AF7BC77C1C88337200A03787 /* ProfileTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF7BC77A1C88337200A03787 /* ProfileTableViewCell.xib */; };
 		AF7BC77E1C88376A00A03787 /* Profile.plist in Resources */ = {isa = PBXBuildFile; fileRef = AF7BC77D1C88376A00A03787 /* Profile.plist */; };
@@ -24,6 +27,12 @@
 		AF989E101C86E1250014BD77 /* WorkManagementViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF989E0E1C86E1250014BD77 /* WorkManagementViewController.xib */; };
 		AF989E141C86E3340014BD77 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF989E121C86E3340014BD77 /* ProfileViewController.m */; };
 		AF989E151C86E3340014BD77 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF989E131C86E3340014BD77 /* ProfileViewController.xib */; };
+		AFA3CADE1C97F7C90009CE1B /* MyCommentsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AFA3CADC1C97F7C90009CE1B /* MyCommentsTableViewCell.m */; };
+		AFA3CADF1C97F7C90009CE1B /* MyCommentsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFA3CADD1C97F7C90009CE1B /* MyCommentsTableViewCell.xib */; };
+		AFA3CAE31C98073E0009CE1B /* MessageCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFA3CAE11C98073E0009CE1B /* MessageCenterViewController.m */; };
+		AFA3CAE41C98073E0009CE1B /* MessageCenterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFA3CAE21C98073E0009CE1B /* MessageCenterViewController.xib */; };
+		AFA3CAE91C980C7A0009CE1B /* MessageCenterTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AFA3CAE71C980C7A0009CE1B /* MessageCenterTableViewCell.m */; };
+		AFA3CAEA1C980C7A0009CE1B /* MessageCenterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFA3CAE81C980C7A0009CE1B /* MessageCenterTableViewCell.xib */; };
 		AFAA3E8F1C96C3730096E650 /* UploadBookTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AFAA3E8D1C96C3730096E650 /* UploadBookTableViewCell.m */; };
 		AFAA3E901C96C3730096E650 /* UploadBookTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFAA3E8E1C96C3730096E650 /* UploadBookTableViewCell.xib */; };
 		AFC163D11C8441D9002E4F3B /* MTFCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AFC163CF1C8441D9002E4F3B /* MTFCollectionViewCell.m */; };
@@ -91,6 +100,13 @@
 		AF123DC81C8D7A0300B2F660 /* ModifyEmailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModifyEmailViewController.h; sourceTree = "<group>"; };
 		AF123DC91C8D7A0300B2F660 /* ModifyEmailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModifyEmailViewController.m; sourceTree = "<group>"; };
 		AF123DCA1C8D7A0300B2F660 /* ModifyEmailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ModifyEmailViewController.xib; sourceTree = "<group>"; };
+		AF1394CF1C9FE52D00DE2B1C /* Grade.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Grade.h; sourceTree = "<group>"; };
+		AF1394D01C9FE52D00DE2B1C /* Grade.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Grade.m; sourceTree = "<group>"; };
+		AF1394D21C9FE6BD00DE2B1C /* GradeResp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GradeResp.h; sourceTree = "<group>"; };
+		AF1394D31C9FE6BD00DE2B1C /* GradeResp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GradeResp.m; sourceTree = "<group>"; };
+		AF1394D61C9FEDA100DE2B1C /* MXPullDownMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXPullDownMenu.h; sourceTree = "<group>"; };
+		AF1394D71C9FEDA100DE2B1C /* MXPullDownMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXPullDownMenu.m; sourceTree = "<group>"; };
+		AF64F6BF1C990102000D2A89 /* Http.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Http.h; sourceTree = "<group>"; };
 		AF7BC7781C88337200A03787 /* ProfileTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileTableViewCell.h; sourceTree = "<group>"; };
 		AF7BC7791C88337200A03787 /* ProfileTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileTableViewCell.m; sourceTree = "<group>"; };
 		AF7BC77A1C88337200A03787 /* ProfileTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileTableViewCell.xib; sourceTree = "<group>"; };
@@ -101,6 +117,15 @@
 		AF989E111C86E3340014BD77 /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
 		AF989E121C86E3340014BD77 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
 		AF989E131C86E3340014BD77 /* ProfileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
+		AFA3CADB1C97F7C90009CE1B /* MyCommentsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCommentsTableViewCell.h; sourceTree = "<group>"; };
+		AFA3CADC1C97F7C90009CE1B /* MyCommentsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCommentsTableViewCell.m; sourceTree = "<group>"; };
+		AFA3CADD1C97F7C90009CE1B /* MyCommentsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyCommentsTableViewCell.xib; sourceTree = "<group>"; };
+		AFA3CAE01C98073E0009CE1B /* MessageCenterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageCenterViewController.h; sourceTree = "<group>"; };
+		AFA3CAE11C98073E0009CE1B /* MessageCenterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageCenterViewController.m; sourceTree = "<group>"; };
+		AFA3CAE21C98073E0009CE1B /* MessageCenterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageCenterViewController.xib; sourceTree = "<group>"; };
+		AFA3CAE61C980C7A0009CE1B /* MessageCenterTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageCenterTableViewCell.h; sourceTree = "<group>"; };
+		AFA3CAE71C980C7A0009CE1B /* MessageCenterTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageCenterTableViewCell.m; sourceTree = "<group>"; };
+		AFA3CAE81C980C7A0009CE1B /* MessageCenterTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageCenterTableViewCell.xib; sourceTree = "<group>"; };
 		AFAA3E8C1C96C3730096E650 /* UploadBookTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UploadBookTableViewCell.h; sourceTree = "<group>"; };
 		AFAA3E8D1C96C3730096E650 /* UploadBookTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UploadBookTableViewCell.m; sourceTree = "<group>"; };
 		AFAA3E8E1C96C3730096E650 /* UploadBookTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UploadBookTableViewCell.xib; sourceTree = "<group>"; };
@@ -187,6 +212,42 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		AF1394CE1C9FE50600DE2B1C /* entity */ = {
+			isa = PBXGroup;
+			children = (
+				AF1394CF1C9FE52D00DE2B1C /* Grade.h */,
+				AF1394D01C9FE52D00DE2B1C /* Grade.m */,
+				AF1394D21C9FE6BD00DE2B1C /* GradeResp.h */,
+				AF1394D31C9FE6BD00DE2B1C /* GradeResp.m */,
+			);
+			name = entity;
+			sourceTree = "<group>";
+		};
+		AF1394D51C9FED7900DE2B1C /* widget */ = {
+			isa = PBXGroup;
+			children = (
+				AF1394DA1C9FEE5300DE2B1C /* downmenu */,
+				AF1394D91C9FEE4500DE2B1C /* A */,
+			);
+			name = widget;
+			sourceTree = "<group>";
+		};
+		AF1394D91C9FEE4500DE2B1C /* A */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = A;
+			sourceTree = "<group>";
+		};
+		AF1394DA1C9FEE5300DE2B1C /* downmenu */ = {
+			isa = PBXGroup;
+			children = (
+				AF1394D61C9FEDA100DE2B1C /* MXPullDownMenu.h */,
+				AF1394D71C9FEDA100DE2B1C /* MXPullDownMenu.m */,
+			);
+			name = downmenu;
+			sourceTree = "<group>";
+		};
 		AF2C898F1C89813F00BD4AC1 /* ModifyNickname */ = {
 			isa = PBXGroup;
 			children = (
@@ -268,6 +329,14 @@
 			name = ModifyIntroduction;
 			sourceTree = "<group>";
 		};
+		AF64F6BE1C98FFE6000D2A89 /* Http */ = {
+			isa = PBXGroup;
+			children = (
+				AF64F6BF1C990102000D2A89 /* Http.h */,
+			);
+			name = Http;
+			sourceTree = "<group>";
+		};
 		AF7BC7771C88334100A03787 /* cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -313,6 +382,7 @@
 		AF989E071C86DE8A0014BD77 /* MyComments */ = {
 			isa = PBXGroup;
 			children = (
+				AFA3CADA1C97F7A70009CE1B /* cell */,
 				E31CF9881C906734001C91A9 /* MyCommentsViewController.h */,
 				E31CF9891C906734001C91A9 /* MyCommentsViewController.m */,
 				E31CF98A1C906734001C91A9 /* MyCommentsViewController.xib */,
@@ -334,6 +404,10 @@
 		AF989E091C86DEA60014BD77 /* MessageCenter */ = {
 			isa = PBXGroup;
 			children = (
+				AFA3CAE51C980C550009CE1B /* cell */,
+				AFA3CAE01C98073E0009CE1B /* MessageCenterViewController.h */,
+				AFA3CAE11C98073E0009CE1B /* MessageCenterViewController.m */,
+				AFA3CAE21C98073E0009CE1B /* MessageCenterViewController.xib */,
 			);
 			name = MessageCenter;
 			sourceTree = "<group>";
@@ -354,6 +428,26 @@
 			children = (
 			);
 			name = MyNote;
+			sourceTree = "<group>";
+		};
+		AFA3CADA1C97F7A70009CE1B /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				AFA3CADB1C97F7C90009CE1B /* MyCommentsTableViewCell.h */,
+				AFA3CADC1C97F7C90009CE1B /* MyCommentsTableViewCell.m */,
+				AFA3CADD1C97F7C90009CE1B /* MyCommentsTableViewCell.xib */,
+			);
+			name = cell;
+			sourceTree = "<group>";
+		};
+		AFA3CAE51C980C550009CE1B /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				AFA3CAE61C980C7A0009CE1B /* MessageCenterTableViewCell.h */,
+				AFA3CAE71C980C7A0009CE1B /* MessageCenterTableViewCell.m */,
+				AFA3CAE81C980C7A0009CE1B /* MessageCenterTableViewCell.xib */,
+			);
+			name = cell;
 			sourceTree = "<group>";
 		};
 		AFAA3E8B1C96C34B0096E650 /* cell */ = {
@@ -431,6 +525,9 @@
 		E3310A471C81FB8900D629F8 /* ICloudBook_ios */ = {
 			isa = PBXGroup;
 			children = (
+				AF1394D51C9FED7900DE2B1C /* widget */,
+				AF1394CE1C9FE50600DE2B1C /* entity */,
+				AF64F6BE1C98FFE6000D2A89 /* Http */,
 				AFC163D31C859448002E4F3B /* Login */,
 				E3C3E95C1C8286E300F233AB /* Other */,
 				E3C3E95B1C8286CC00F233AB /* Launch */,
@@ -674,7 +771,10 @@
 				AFC163D81C85948E002E4F3B /* SigninViewController.xib in Resources */,
 				E3310A581C81FB8900D629F8 /* Assets.xcassets in Resources */,
 				AF7BC77C1C88337200A03787 /* ProfileTableViewCell.xib in Resources */,
+				AFA3CADF1C97F7C90009CE1B /* MyCommentsTableViewCell.xib in Resources */,
+				AFA3CAEA1C980C7A0009CE1B /* MessageCenterTableViewCell.xib in Resources */,
 				E31CF9871C9063EE001C91A9 /* UploadBookViewController.xib in Resources */,
+				AFA3CAE41C98073E0009CE1B /* MessageCenterViewController.xib in Resources */,
 				E3310A561C81FB8900D629F8 /* Main.storyboard in Resources */,
 				AF123DC21C8D771B00B2F660 /* ModifyMottoViewController.xib in Resources */,
 				E31CF98C1C906734001C91A9 /* MyCommentsViewController.xib in Resources */,
@@ -760,17 +860,23 @@
 				E3310A4D1C81FB8900D629F8 /* AppDelegate.m in Sources */,
 				AF989E141C86E3340014BD77 /* ProfileViewController.m in Sources */,
 				AF123DB71C8D5C7900B2F660 /* ModifyPwdViewController.m in Sources */,
+				AFA3CAE91C980C7A0009CE1B /* MessageCenterTableViewCell.m in Sources */,
 				AF123DC61C8D79F400B2F660 /* ModifyPhoneViewController.m in Sources */,
 				E3310A501C81FB8900D629F8 /* ReadViewController.m in Sources */,
+				AF1394D41C9FE6BD00DE2B1C /* GradeResp.m in Sources */,
 				E31CF99C1C907A25001C91A9 /* ManagementTableViewCell.m in Sources */,
 				AF123DCB1C8D7A0300B2F660 /* ModifyEmailViewController.m in Sources */,
 				AF989E0F1C86E1250014BD77 /* WorkManagementViewController.m in Sources */,
 				AF123DC11C8D771B00B2F660 /* ModifyMottoViewController.m in Sources */,
 				E31CF9861C9063EE001C91A9 /* UploadBookViewController.m in Sources */,
 				AF123DBC1C8D69FA00B2F660 /* ModifyIntroViewController.m in Sources */,
+				AF1394D11C9FE52D00DE2B1C /* Grade.m in Sources */,
 				E31CF9901C90675D001C91A9 /* BookFriendViewController.m in Sources */,
+				AFA3CAE31C98073E0009CE1B /* MessageCenterViewController.m in Sources */,
 				E3310A851C8201BA00D629F8 /* ManagementViewController.m in Sources */,
 				AFC163D11C8441D9002E4F3B /* MTFCollectionViewCell.m in Sources */,
+				AFA3CADE1C97F7C90009CE1B /* MyCommentsTableViewCell.m in Sources */,
+				AF1394D81C9FEDA100DE2B1C /* MXPullDownMenu.m in Sources */,
 				E37A68801C8AC4EE0013395E /* ModifyNicknameViewController.m in Sources */,
 				AFAA3E8F1C96C3730096E650 /* UploadBookTableViewCell.m in Sources */,
 				E3310A4A1C81FB8900D629F8 /* main.m in Sources */,

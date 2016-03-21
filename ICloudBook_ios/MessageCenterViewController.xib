@@ -5,9 +5,9 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MyCommentsViewController">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MessageCenterViewController">
             <connections>
-                <outlet property="myCommentTableView" destination="Znw-NK-tmk" id="hy0-fi-eM9"/>
+                <outlet property="messageCenterTableView" destination="u5Z-Gf-FdF" id="INE-27-sjl"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -16,12 +16,12 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Znw-NK-tmk">
-                    <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="u5Z-Gf-FdF">
+                    <rect key="frame" x="0.0" y="20" width="312" height="548"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <connections>
-                        <outlet property="dataSource" destination="-1" id="nZI-QX-ugY"/>
-                        <outlet property="delegate" destination="-1" id="Vuc-dX-65S"/>
+                        <outlet property="dataSource" destination="-1" id="qCh-ax-q9M"/>
+                        <outlet property="delegate" destination="-1" id="Cza-qw-qXT"/>
                     </connections>
                 </tableView>
             </subviews>

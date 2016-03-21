@@ -12,6 +12,8 @@
 #import "ProfileViewController.h"
 #import "UploadBookViewController.h"
 #import "BookFriendViewController.h"
+#import "MyCommentsViewController.h"
+#import "MessageCenterViewController.h"
 
 @interface PersonalViewController ()
 
@@ -92,6 +94,7 @@
     
     cell.textLabel.text  = [listData objectAtIndex: [indexPath row]];
     cell.imageView.image = [UIImage imageNamed:[images objectAtIndex:[indexPath row]]];
+//    [cell.imageView setFrame:CGRectMake(0, 0, 20, 20)];
     
     //bind data
 //    cell.imageView.image = [UIImage imageNamed:[images objectAtIndex:[indexPath row]]];
@@ -112,13 +115,25 @@
     NSInteger row = indexPath.row;
     if (row == 0) {
         WorkManagementViewController * workManaementVc = [[WorkManagementViewController alloc] initWithNibName:@"WorkManagementViewController" bundle:nil];
+        workManaementVc.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:workManaementVc animated:YES];
+
     } else if (row == 3) {
         BookFriendViewController * bookFriendVc = [[BookFriendViewController alloc] initWithNibName:@"BookFriendViewController" bundle:nil];
+        bookFriendVc.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:bookFriendVc animated:YES];
     }else if (row == 1) {
         UploadBookViewController * uploadBookVc = [[UploadBookViewController alloc]initWithNibName:@"UploadBookViewController" bundle:nil];
+        uploadBookVc.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:uploadBookVc animated:YES];
+    }else if (row == 2) {
+        MyCommentsViewController * myCommentsVc = [[MyCommentsViewController alloc]initWithNibName:@"MyCommentsViewController" bundle:nil];
+        myCommentsVc.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:myCommentsVc animated:YES];
+    }else if (row == 4) {
+        MessageCenterViewController * msgCenterVc = [[MessageCenterViewController alloc] initWithNibName:@"MessageCenterViewController" bundle:nil];
+        msgCenterVc.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:msgCenterVc animated:YES];
     }
 }
 

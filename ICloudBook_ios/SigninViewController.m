@@ -9,13 +9,14 @@
 #import "SigninViewController.h"
 #import <AFNetworking.h>
 #import "GradeResp.h"
+#import "Grade.h"
 #import "MXPullDownMenu.h"
 
 //获取年级
 #define URL_GRADE @"http://116.255.235.119:1282/teachingAssistantInterface/userInfo/schoolGrade"
 
 //获取班级
-#define URL_CLASSES @"http://116.255.235.119:1282/teachingAssistantInterface/userInfo/schoolGradeClasses?id="
+#define URL_CLASSES @"http://116.255.235.119:1282/teachingAssistantInterface/userInfo/schoolGradeClasses?id=%@"
 
 @interface SigninViewController ()
 
@@ -43,6 +44,7 @@
     [self getGradeList];
 }
 
+//获取年级
 -(void) getGradeList {
     
     //
@@ -56,6 +58,7 @@
         gradeResp = responseObject;
         NSLog(@"%@", gradeResp);//success
         progress.labelText = @"获取班级...";
+        self.getClassesList;
         
     } failure:^(NSURLSessionDataTask *_Nullable task, NSError* _Nullable error) {
         NSLog(@"%@", error);//error
@@ -63,8 +66,24 @@
     }];
 }
 
+//获取班级
 -(void) getClassesList {
+//    NSArray * arr = gradeResp.grades;
+//    Grade* grade = [arr objectAtIndex:0];
+    NSString* url = [NSString stringWithFormat:URL_CLASSES, @"2016"];
     
+    AFHTTPSessionManager* manager = [AFHTTPSessionManager manager];
+    
+    //获取年级
+    [manager GET:url parameters:nil progress:nil success:^(NSURLSessionDataTask *_Nullable task, id _Nullable responseObject){
+        gradeResp = responseObject;
+        NSLog(@"%@", gradeResp);//success
+        [progress hide:YES];
+        
+    } failure:^(NSURLSessionDataTask *_Nullable task, NSError* _Nullable error) {
+        NSLog(@"%@", error);//error
+        [progress hide:YES];
+    }];
 }
 
 -(void) signinClick {

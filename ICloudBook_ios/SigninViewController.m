@@ -67,9 +67,13 @@
         [self getClassesList];
         
     } failure:^(NSURLSessionDataTask *_Nullable task, NSError* _Nullable error) {
-        NSLog(@"%@", error);//error
+        NSLog(@"%@", error);//error this
         [progress hide:YES];
     }];
+}
+
+-(void) none:(NSString* ) reason {
+    NSLog(@"%@", reason);
 }
 
 //

@@ -9,13 +9,18 @@
 #import <UIKit/UIKit.h>
 #import <MBProgressHUD.h>
 #import "GradeResp.h"
+#import "MXPullDownMenu.h"
 
-@interface SigninViewController : UIViewController
-{
+@interface SigninViewController : UIViewController <MXPullDownMenuDelegate> {
+    
     __weak IBOutlet UITextField *nameTextField;
     __weak IBOutlet UITextField *passwordTextField;
     __weak IBOutlet UIButton    *signinButton;
-    GradeResp * gradeResp;
+    
+    NSMutableArray* menuData; //下拉菜单数据
+    
+    NSInteger chooseGradeId  ;//选择的年级
+    NSInteger chooseClassesid;//选择的班级
 }
 
 @property (nonatomic, retain) MBProgressHUD * progress;

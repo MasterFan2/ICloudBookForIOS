@@ -212,6 +212,13 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		AF0D382B1CA1378500DB6B71 /* utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = utils;
+			sourceTree = "<group>";
+		};
 		AF1394CE1C9FE50600DE2B1C /* entity */ = {
 			isa = PBXGroup;
 			children = (
@@ -525,6 +532,7 @@
 		E3310A471C81FB8900D629F8 /* ICloudBook_ios */ = {
 			isa = PBXGroup;
 			children = (
+				AF0D382B1CA1378500DB6B71 /* utils */,
 				AF1394D51C9FED7900DE2B1C /* widget */,
 				AF1394CE1C9FE50600DE2B1C /* entity */,
 				AF64F6BE1C98FFE6000D2A89 /* Http */,

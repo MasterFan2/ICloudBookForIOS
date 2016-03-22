@@ -9,13 +9,17 @@
 #import "SigninViewController.h"
 #import <AFNetworking.h>
 #import "GradeResp.h"
+#import "Grade.h"
 #import "MXPullDownMenu.h"
 
-//获取年级
+//获取年级url
 #define URL_GRADE @"http://116.255.235.119:1282/teachingAssistantInterface/userInfo/schoolGrade"
 
-//获取班级
-#define URL_CLASSES @"http://116.255.235.119:1282/teachingAssistantInterface/userInfo/schoolGradeClasses?id="
+//获取班级url
+#define URL_CLASSES @"http://116.255.235.119:1282/teachingAssistantInterface/userInfo/schoolGradeClasses?id=%@"
+
+//登录
+#define URL_LOGIN @"http://116.255.235.119:1282/teachingAssistantInterface/userInfo/login"
 
 @interface SigninViewController ()
 
@@ -26,12 +30,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
-//    UIImageView * img = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"ic_upload_verify"]];
-//    [img setFrame:CGRectMake(0, 0, 50, 50)];
-//    [nameTextField setLeftView:img];
-//    [nameTextField setLeftViewMode:UITextFieldViewModeAlways];
-    self.navigationItem.title = @"登录";
     
     //show progress
     self.progress = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
@@ -39,23 +37,34 @@
     // add button action
     [signinButton addTarget:self action:@selector(signinClick) forControlEvents:UIControlEventTouchUpInside];
     
-    //
+    menuData = [[NSMutableArray alloc] init];
+    
+    //获取年级数据
     [self getGradeList];
 }
 
+//
+//获取年级列表
+//
 -(void) getGradeList {
-    
     //
     progress.labelText = @"获取年级...";
     [progress show:YES];
     
-    AFHTTPSessionManager* manager = [AFHTTPSessionManager manager];
-    
     //获取年级
+    AFHTTPSessionManager* manager = [AFHTTPSessionManager manager];
     [manager GET:URL_GRADE parameters:nil progress:nil success:^(NSURLSessionDataTask *_Nullable task, id _Nullable responseObject){
-        gradeResp = responseObject;
-        NSLog(@"%@", gradeResp);//success
+        NSArray* arr = [responseObject valueForKeyPath:@"grades"];
+        NSMutableArray* gradeNameList = [[NSMutableArray alloc] init];
+        
+        for (NSDictionary* temp in arr) {
+            [gradeNameList addObject:temp[@"name"]];
+        }
+        
+        //添加下拉菜单的数据
+        [menuData addObject:gradeNameList];
         progress.labelText = @"获取班级...";
+        [self getClassesList];
         
     } failure:^(NSURLSessionDataTask *_Nullable task, NSError* _Nullable error) {
         NSLog(@"%@", error);//error
@@ -63,10 +72,46 @@
     }];
 }
 
+//
+//获取班级列表数据
+//
 -(void) getClassesList {
-    
+    NSString* url = [NSString stringWithFormat:URL_CLASSES, @"1"];
+    AFHTTPSessionManager* manager = [AFHTTPSessionManager manager];
+    [manager GET:url parameters:nil progress:nil success:^(NSURLSessionDataTask *_Nullable task, id _Nullable responseObject){
+        NSArray* tempArr = [responseObject valueForKeyPath:@"classes"];
+        NSMutableArray* classesNameList = [[NSMutableArray alloc]init];
+        for (NSDictionary* dict in tempArr) {
+            [classesNameList addObject:dict[@"name"]];
+        }
+        [progress hide:YES];
+        
+        //添加下拉菜单的数据
+        [menuData addObject:classesNameList];
+        
+        [self addDownMenu:menuData];
+        
+    } failure:^(NSURLSessionDataTask *_Nullable task, NSError* _Nullable error) {
+        NSLog(@"%@", error);//error
+        [progress hide:YES];
+    }];
 }
 
+//
+//添加下拉菜单
+//
+-(void) addDownMenu:(NSArray*) arrData {
+    //添加下拉控件
+    CGRect nameFrame = nameTextField.frame;
+    MXPullDownMenu *menu = [[MXPullDownMenu alloc] initWithArray:arrData selectedColor:[UIColor greenColor]];
+    menu.delegate = self;
+    menu.frame = CGRectMake(0, nameFrame.origin.y - 60, menu.frame.size.width, menu.frame.size.height);
+    [self.view addSubview:menu];
+}
+
+//
+//登录按钮点击事件
+//
 -(void) signinClick {
     NSString* uname = nameTextField.text;
     NSString* pwd   = passwordTextField.text;
@@ -84,6 +129,19 @@
         [alert show];
         return;
     }
+    
+    
+    NSDictionary* parameters = [[NSDictionary alloc] initWithObjects:@[@1, uname, pwd] forKeys:@[@"classid", @"account", @"password"]];
+    AFHTTPSessionManager* manager = [AFHTTPSessionManager manager];
+    [manager GET:URL_LOGIN parameters:parameters progress:nil success:^(NSURLSessionDataTask *_Nullable task, id _Nullable responseObject){
+
+        NSLog(@"登录结果%@", responseObject);
+        
+    } failure:^(NSURLSessionDataTask *_Nullable task, NSError* _Nullable error) {
+        NSLog(@"%@", error);//error
+        [progress hide:YES];
+    }];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -100,5 +158,10 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+#pragma mark - DownMenu delegate
+- (void)PullDownMenu:(MXPullDownMenu *)pullDownMenu didSelectRowAtColumn:(NSInteger)column row:(NSInteger)row {
+    NSLog(@"%d -- %d", column, row);
+}
 
 @end

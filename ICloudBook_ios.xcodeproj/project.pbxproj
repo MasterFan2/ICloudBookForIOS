@@ -20,6 +20,11 @@
 		AF1394D11C9FE52D00DE2B1C /* Grade.m in Sources */ = {isa = PBXBuildFile; fileRef = AF1394D01C9FE52D00DE2B1C /* Grade.m */; };
 		AF1394D41C9FE6BD00DE2B1C /* GradeResp.m in Sources */ = {isa = PBXBuildFile; fileRef = AF1394D31C9FE6BD00DE2B1C /* GradeResp.m */; };
 		AF1394D81C9FEDA100DE2B1C /* MXPullDownMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = AF1394D71C9FEDA100DE2B1C /* MXPullDownMenu.m */; };
+		AF1E95C41CA2A48600A87F32 /* JFMinimalNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = AF1E95BB1CA2A48600A87F32 /* JFMinimalNotification.m */; };
+		AF1E95C51CA2A48600A87F32 /* JFMinimalNotificationArt.m in Sources */ = {isa = PBXBuildFile; fileRef = AF1E95BD1CA2A48600A87F32 /* JFMinimalNotificationArt.m */; };
+		AF1E95C61CA2A48600A87F32 /* NSInvocation+Constructors.m in Sources */ = {isa = PBXBuildFile; fileRef = AF1E95BF1CA2A48600A87F32 /* NSInvocation+Constructors.m */; };
+		AF1E95C71CA2A48600A87F32 /* UIColor+JFMinimalNotificationColors.m in Sources */ = {isa = PBXBuildFile; fileRef = AF1E95C11CA2A48600A87F32 /* UIColor+JFMinimalNotificationColors.m */; };
+		AF1E95C81CA2A48600A87F32 /* UIView+Round.m in Sources */ = {isa = PBXBuildFile; fileRef = AF1E95C31CA2A48600A87F32 /* UIView+Round.m */; };
 		AF7BC77B1C88337200A03787 /* ProfileTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AF7BC7791C88337200A03787 /* ProfileTableViewCell.m */; };
 		AF7BC77C1C88337200A03787 /* ProfileTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF7BC77A1C88337200A03787 /* ProfileTableViewCell.xib */; };
 		AF7BC77E1C88376A00A03787 /* Profile.plist in Resources */ = {isa = PBXBuildFile; fileRef = AF7BC77D1C88376A00A03787 /* Profile.plist */; };
@@ -106,6 +111,17 @@
 		AF1394D31C9FE6BD00DE2B1C /* GradeResp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GradeResp.m; sourceTree = "<group>"; };
 		AF1394D61C9FEDA100DE2B1C /* MXPullDownMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXPullDownMenu.h; sourceTree = "<group>"; };
 		AF1394D71C9FEDA100DE2B1C /* MXPullDownMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXPullDownMenu.m; sourceTree = "<group>"; };
+		AF1E95B81CA2920400A87F32 /* Status.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Status.h; sourceTree = "<group>"; };
+		AF1E95BA1CA2A48600A87F32 /* JFMinimalNotification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFMinimalNotification.h; sourceTree = "<group>"; };
+		AF1E95BB1CA2A48600A87F32 /* JFMinimalNotification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JFMinimalNotification.m; sourceTree = "<group>"; };
+		AF1E95BC1CA2A48600A87F32 /* JFMinimalNotificationArt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFMinimalNotificationArt.h; sourceTree = "<group>"; };
+		AF1E95BD1CA2A48600A87F32 /* JFMinimalNotificationArt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JFMinimalNotificationArt.m; sourceTree = "<group>"; };
+		AF1E95BE1CA2A48600A87F32 /* NSInvocation+Constructors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSInvocation+Constructors.h"; sourceTree = "<group>"; };
+		AF1E95BF1CA2A48600A87F32 /* NSInvocation+Constructors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSInvocation+Constructors.m"; sourceTree = "<group>"; };
+		AF1E95C01CA2A48600A87F32 /* UIColor+JFMinimalNotificationColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+JFMinimalNotificationColors.h"; sourceTree = "<group>"; };
+		AF1E95C11CA2A48600A87F32 /* UIColor+JFMinimalNotificationColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+JFMinimalNotificationColors.m"; sourceTree = "<group>"; };
+		AF1E95C21CA2A48600A87F32 /* UIView+Round.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Round.h"; sourceTree = "<group>"; };
+		AF1E95C31CA2A48600A87F32 /* UIView+Round.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Round.m"; sourceTree = "<group>"; };
 		AF64F6BF1C990102000D2A89 /* Http.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Http.h; sourceTree = "<group>"; };
 		AF7BC7781C88337200A03787 /* ProfileTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileTableViewCell.h; sourceTree = "<group>"; };
 		AF7BC7791C88337200A03787 /* ProfileTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileTableViewCell.m; sourceTree = "<group>"; };
@@ -233,6 +249,7 @@
 		AF1394D51C9FED7900DE2B1C /* widget */ = {
 			isa = PBXGroup;
 			children = (
+				AF1E95B91CA2A46400A87F32 /* miniNotification */,
 				AF1394DA1C9FEE5300DE2B1C /* downmenu */,
 				AF1394D91C9FEE4500DE2B1C /* A */,
 			);
@@ -253,6 +270,23 @@
 				AF1394D71C9FEDA100DE2B1C /* MXPullDownMenu.m */,
 			);
 			name = downmenu;
+			sourceTree = "<group>";
+		};
+		AF1E95B91CA2A46400A87F32 /* miniNotification */ = {
+			isa = PBXGroup;
+			children = (
+				AF1E95BA1CA2A48600A87F32 /* JFMinimalNotification.h */,
+				AF1E95BB1CA2A48600A87F32 /* JFMinimalNotification.m */,
+				AF1E95BC1CA2A48600A87F32 /* JFMinimalNotificationArt.h */,
+				AF1E95BD1CA2A48600A87F32 /* JFMinimalNotificationArt.m */,
+				AF1E95BE1CA2A48600A87F32 /* NSInvocation+Constructors.h */,
+				AF1E95BF1CA2A48600A87F32 /* NSInvocation+Constructors.m */,
+				AF1E95C01CA2A48600A87F32 /* UIColor+JFMinimalNotificationColors.h */,
+				AF1E95C11CA2A48600A87F32 /* UIColor+JFMinimalNotificationColors.m */,
+				AF1E95C21CA2A48600A87F32 /* UIView+Round.h */,
+				AF1E95C31CA2A48600A87F32 /* UIView+Round.m */,
+			);
+			name = miniNotification;
 			sourceTree = "<group>";
 		};
 		AF2C898F1C89813F00BD4AC1 /* ModifyNickname */ = {
@@ -340,6 +374,7 @@
 			isa = PBXGroup;
 			children = (
 				AF64F6BF1C990102000D2A89 /* Http.h */,
+				AF1E95B81CA2920400A87F32 /* Status.h */,
 			);
 			name = Http;
 			sourceTree = "<group>";
@@ -868,17 +903,22 @@
 				E3310A4D1C81FB8900D629F8 /* AppDelegate.m in Sources */,
 				AF989E141C86E3340014BD77 /* ProfileViewController.m in Sources */,
 				AF123DB71C8D5C7900B2F660 /* ModifyPwdViewController.m in Sources */,
+				AF1E95C71CA2A48600A87F32 /* UIColor+JFMinimalNotificationColors.m in Sources */,
+				AF1E95C81CA2A48600A87F32 /* UIView+Round.m in Sources */,
 				AFA3CAE91C980C7A0009CE1B /* MessageCenterTableViewCell.m in Sources */,
 				AF123DC61C8D79F400B2F660 /* ModifyPhoneViewController.m in Sources */,
 				E3310A501C81FB8900D629F8 /* ReadViewController.m in Sources */,
 				AF1394D41C9FE6BD00DE2B1C /* GradeResp.m in Sources */,
+				AF1E95C51CA2A48600A87F32 /* JFMinimalNotificationArt.m in Sources */,
 				E31CF99C1C907A25001C91A9 /* ManagementTableViewCell.m in Sources */,
 				AF123DCB1C8D7A0300B2F660 /* ModifyEmailViewController.m in Sources */,
+				AF1E95C41CA2A48600A87F32 /* JFMinimalNotification.m in Sources */,
 				AF989E0F1C86E1250014BD77 /* WorkManagementViewController.m in Sources */,
 				AF123DC11C8D771B00B2F660 /* ModifyMottoViewController.m in Sources */,
 				E31CF9861C9063EE001C91A9 /* UploadBookViewController.m in Sources */,
 				AF123DBC1C8D69FA00B2F660 /* ModifyIntroViewController.m in Sources */,
 				AF1394D11C9FE52D00DE2B1C /* Grade.m in Sources */,
+				AF1E95C61CA2A48600A87F32 /* NSInvocation+Constructors.m in Sources */,
 				E31CF9901C90675D001C91A9 /* BookFriendViewController.m in Sources */,
 				AFA3CAE31C98073E0009CE1B /* MessageCenterViewController.m in Sources */,
 				E3310A851C8201BA00D629F8 /* ManagementViewController.m in Sources */,

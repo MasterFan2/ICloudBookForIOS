@@ -8,9 +8,9 @@
 
 #import "SigninViewController.h"
 #import <AFNetworking.h>
-#import "GradeResp.h"
-#import "Grade.h"
+#import "Status.h"
 #import "MXPullDownMenu.h"
+#import "JFMinimalNotification.h"
 
 //获取年级url
 #define URL_GRADE @"http://116.255.235.119:1282/teachingAssistantInterface/userInfo/schoolGrade"
@@ -18,11 +18,11 @@
 //获取班级url
 #define URL_CLASSES @"http://116.255.235.119:1282/teachingAssistantInterface/userInfo/schoolGradeClasses?id=%@"
 
-//登录
+//登录url
 #define URL_LOGIN @"http://116.255.235.119:1282/teachingAssistantInterface/userInfo/login"
 
-@interface SigninViewController ()
-
+@interface SigninViewController () <JFMinimalNotificationDelegate>
+@property (nonatomic, strong) JFMinimalNotification* minimalNotification;
 @end
 
 @implementation SigninViewController
@@ -38,6 +38,7 @@
     [signinButton addTarget:self action:@selector(signinClick) forControlEvents:UIControlEventTouchUpInside];
     
     menuData = [[NSMutableArray alloc] init];
+    
     
     //获取年级数据
     [self getGradeList];
@@ -65,13 +66,15 @@
         [menuData addObject:gradeNameList];
         progress.labelText = @"获取班级...";
         [self getClassesList];
-        
     } failure:^(NSURLSessionDataTask *_Nullable task, NSError* _Nullable error) {
         NSLog(@"%@", error);//error this
         [progress hide:YES];
     }];
 }
 
+//
+//
+//
 -(void) none:(NSString* ) reason {
     NSLog(@"%@", reason);
 }
@@ -109,6 +112,7 @@
     CGRect nameFrame = nameTextField.frame;
     MXPullDownMenu *menu = [[MXPullDownMenu alloc] initWithArray:arrData selectedColor:[UIColor greenColor]];
     menu.delegate = self;
+    menu.tag = 109;
     menu.frame = CGRectMake(0, nameFrame.origin.y - 60, menu.frame.size.width, menu.frame.size.height);
     [self.view addSubview:menu];
 }
@@ -121,14 +125,14 @@
     NSString* pwd   = passwordTextField.text;
     
     //check user name
-    if (uname == nil || [uname  isEqual: @" "]) {
+    if (uname == nil || uname.length == 0) {
         UIAlertView * alert = [[UIAlertView alloc]initWithTitle:@"提示您" message:@"用户名不能为空" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil];
         [alert show];
         return;
     }
     
     //check password
-    if (pwd == nil || [pwd  isEqual: @" "]) {
+    if (pwd == nil || pwd.length == 0) {
         UIAlertView * alert = [[UIAlertView alloc]initWithTitle:@"提示您" message:@"密码不能为空" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil];
         [alert show];
         return;
@@ -139,7 +143,33 @@
     AFHTTPSessionManager* manager = [AFHTTPSessionManager manager];
     [manager GET:URL_LOGIN parameters:parameters progress:nil success:^(NSURLSessionDataTask *_Nullable task, id _Nullable responseObject){
 
-        NSLog(@"登录结果%@", responseObject);
+        NSInteger status = [responseObject valueForKey:@"code"];
+        if (status == SUCCESS) {
+            //登录成功
+            //notification
+            self.minimalNotification = [JFMinimalNotification notificationWithStyle:JFMinimalNotificationStyleSuccess title:@"登录" subTitle:@"登录成功" dismissalDelay:0.0 touchHandler:^{
+                [self.minimalNotification dismiss];
+            }];
+        }else if (status == INCORRECT_UNAME_PWD) {
+            //notification
+            self.minimalNotification = [JFMinimalNotification notificationWithStyle:JFMinimalNotificationStyleError title:@"登录" subTitle:@"用户名或密码错误" dismissalDelay:0.0 touchHandler:^{
+                [self.minimalNotification dismiss];
+            }];
+        }else if (status == USER_DISABLE) {
+            //notification
+            self.minimalNotification = [JFMinimalNotification notificationWithStyle:JFMinimalNotificationStyleError title:@"登录" subTitle:@"您已被禁用！" dismissalDelay:0.0 touchHandler:^{
+                [self.minimalNotification dismiss];
+            }];
+        }else {
+            //notification
+            self.minimalNotification = [JFMinimalNotification notificationWithStyle:JFMinimalNotificationStyleError title:@"登录" subTitle:@"登录失败,联系管理员" dismissalDelay:0.0 touchHandler:^{
+                [self.minimalNotification dismiss];
+            }];
+        }
+        
+        [self.view addSubview:self.minimalNotification];
+        [self.minimalNotification show];//
+        
         
     } failure:^(NSURLSessionDataTask *_Nullable task, NSError* _Nullable error) {
         NSLog(@"%@", error);//error
@@ -148,6 +178,9 @@
     
 }
 
+//
+//
+//
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -165,7 +198,7 @@
 
 #pragma mark - DownMenu delegate
 - (void)PullDownMenu:(MXPullDownMenu *)pullDownMenu didSelectRowAtColumn:(NSInteger)column row:(NSInteger)row {
-    NSLog(@"%d -- %d", column, row);
+    NSLog(@"colum => %d -- row => %d", column, row);
 }
 
 @end

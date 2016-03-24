@@ -19,12 +19,21 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     SigninViewController* signinViewController = [[SigninViewController alloc] initWithNibName:@"SigninViewController" bundle:nil];
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(toMain) name:@"toMain" object:nil];
 //
+    
     self.window.rootViewController = signinViewController;
     [self.window makeKeyAndVisible];
     
 //    [NSThread sleepForTimeInterval:1.0];
     return YES;
+}
+
+-(void) toMain {
+    UIStoryboard* mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+//    UIViewController* mainController = [mainStoryboard instantiateViewControllerWithIdentifier:@"main"];
+    self.window.rootViewController = mainStoryboard;
+    [self.window makeKeyAndVisible];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

@@ -405,6 +405,11 @@ static CGFloat const kNotificationAccessoryPadding = 10.0f;
     }
 }
 
+- (void)setTitle:(NSString*)title andSubtitle:(NSString* ) subTitle {
+    self.titleLabel.text = title;
+    self.subTitleLabel.text = subTitle;
+}
+
 - (void)setTitleFont:(UIFont*)font
 {
     [self.titleLabel setFont:font];
@@ -660,7 +665,3 @@ static CGFloat const kNotificationAccessoryPadding = 10.0f;
 }
 
 @end
-
-// 版权属于原作者
-// http://code4app.com (cn) http://code4app.net (en)
-// 发布代码于最专业的源码分享网站: Code4App.com 

@@ -29,7 +29,7 @@
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                 </button>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="姓名 / 手机" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ft9-O2-aVw">
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="ajian" borderStyle="roundedRect" placeholder="姓名 / 手机" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ft9-O2-aVw">
                     <rect key="frame" x="31" y="311" width="259" height="30"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="30" id="JLL-pM-l63"/>
@@ -55,7 +55,7 @@
                         <constraint firstAttribute="width" constant="85" id="P7F-fz-iAK"/>
                     </constraints>
                 </imageView>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="密码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nGq-7W-tom">
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="123456" borderStyle="roundedRect" placeholder="密码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nGq-7W-tom">
                     <rect key="frame" x="31" y="354" width="259" height="30"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="30" id="cI7-GY-g3p"/>

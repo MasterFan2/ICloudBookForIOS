@@ -21,7 +21,9 @@
 //登录url
 #define URL_LOGIN @"http://116.255.235.119:1282/teachingAssistantInterface/userInfo/login"
 
-@interface SigninViewController () <JFMinimalNotificationDelegate>
+@interface SigninViewController () <JFMinimalNotificationDelegate> {
+    NSUserDefaults* localCache;
+}
 @property (nonatomic, strong) JFMinimalNotification* minimalNotification;
 @end
 
@@ -30,6 +32,25 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    //init cache
+    if (!localCache) {
+        localCache = [NSUserDefaults standardUserDefaults];
+    }
+    
+    NSDictionary* dict = [localCache valueForKey:@"user"];
+    if (dict) {//logined
+        [[NSNotificationCenter defaultCenter]postNotificationName:@"goMain" object:nil];
+        return;
+    }
+    
+    //init minimal notification
+    self.minimalNotification = [JFMinimalNotification notificationWithStyle:JFMinimalNotificationStyleSuccess title:@"登录" subTitle:@"登录成功" dismissalDelay:0.0 touchHandler:^{
+        [self.minimalNotification dismiss];
+    }];
+    self.minimalNotification.delegate = self;
+    
+    [self.view addSubview:self.minimalNotification];
     
     //show progress
     self.progress = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
@@ -126,60 +147,96 @@
     
     //check user name
     if (uname == nil || uname.length == 0) {
-        UIAlertView * alert = [[UIAlertView alloc]initWithTitle:@"提示您" message:@"用户名不能为空" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil];
-        [alert show];
+        [self.minimalNotification setTitle:@"提示您" andSubtitle:@"用户名不能为空"];
+        [self.minimalNotification setStyle:JFMinimalNotificationStyleWarning animated:YES];
+        [self.minimalNotification show];
         return;
     }
     
     //check password
     if (pwd == nil || pwd.length == 0) {
-        UIAlertView * alert = [[UIAlertView alloc]initWithTitle:@"提示您" message:@"密码不能为空" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil];
-        [alert show];
+        [self.minimalNotification setTitle:@"提示您" andSubtitle:@"密码不能为空"];
+        [self.minimalNotification setStyle:JFMinimalNotificationStyleWarning animated:YES];
+        [self.minimalNotification show];
         return;
     }
     
-    
+    [progress show:YES];
     NSDictionary* parameters = [[NSDictionary alloc] initWithObjects:@[@1, uname, pwd] forKeys:@[@"classid", @"account", @"password"]];
     AFHTTPSessionManager* manager = [AFHTTPSessionManager manager];
     [manager GET:URL_LOGIN parameters:parameters progress:nil success:^(NSURLSessionDataTask *_Nullable task, id _Nullable responseObject){
+        [progress hide:YES];
 
-        NSInteger status = [responseObject valueForKey:@"code"];
-        if (status == SUCCESS) {
-            //登录成功
+        //login status
+        NSNumber* status = [responseObject valueForKey:@"code"];
+        
+        if (status.intValue == SUCCESS) {//登录成功
+            
             //notification
-            self.minimalNotification = [JFMinimalNotification notificationWithStyle:JFMinimalNotificationStyleSuccess title:@"登录" subTitle:@"登录成功" dismissalDelay:0.0 touchHandler:^{
-                [self.minimalNotification dismiss];
-            }];
-        }else if (status == INCORRECT_UNAME_PWD) {
+            [self.minimalNotification setTitle:@"提示您" andSubtitle:@"登录成功"];
+            [self.minimalNotification setStyle:JFMinimalNotificationStyleSuccess animated:YES];
+            [self cacheLoginInfo:responseObject];
+        }else if (status.intValue  == INCORRECT_UNAME_PWD) {
+            [self.minimalNotification setTitle:@"提示您" andSubtitle:@"用户名或密码错误"];
+            [self.minimalNotification setStyle:JFMinimalNotificationStyleWarning animated:YES];
             //notification
-            self.minimalNotification = [JFMinimalNotification notificationWithStyle:JFMinimalNotificationStyleError title:@"登录" subTitle:@"用户名或密码错误" dismissalDelay:0.0 touchHandler:^{
-                [self.minimalNotification dismiss];
-            }];
-        }else if (status == USER_DISABLE) {
+          
+        }else if (status.intValue  == USER_DISABLE) {
             //notification
-            self.minimalNotification = [JFMinimalNotification notificationWithStyle:JFMinimalNotificationStyleError title:@"登录" subTitle:@"您已被禁用！" dismissalDelay:0.0 touchHandler:^{
-                [self.minimalNotification dismiss];
-            }];
+            [self.minimalNotification setStyle:JFMinimalNotificationStyleError animated:YES];
+            [self.minimalNotification setTitle:@"提示您" andSubtitle:@"您的账号已被禁止使用"];
         }else {
             //notification
-            self.minimalNotification = [JFMinimalNotification notificationWithStyle:JFMinimalNotificationStyleError title:@"登录" subTitle:@"登录失败,联系管理员" dismissalDelay:0.0 touchHandler:^{
-                [self.minimalNotification dismiss];
-            }];
+            [self.minimalNotification setStyle:JFMinimalNotificationStyleWarning animated:YES];
+            [self.minimalNotification setTitle:@"提示您" andSubtitle:@"登录失败,请稍后再试"];
         }
         
-        [self.view addSubview:self.minimalNotification];
-        [self.minimalNotification show];//
-        
-        
+        [self.minimalNotification show];//show tips
     } failure:^(NSURLSessionDataTask *_Nullable task, NSError* _Nullable error) {
         NSLog(@"%@", error);//error
+        
+        //hide progressbar
         [progress hide:YES];
+        
+        //show tips
+        [self.minimalNotification setStyle:JFMinimalNotificationStyleError animated:YES];
+        [self.minimalNotification setTitle:@"提示您" andSubtitle:@"服务器错误,请联系管理员"];
+        [self.minimalNotification show];//
     }];
     
 }
 
 //
+//缓存登录信息到本地
 //
+-(void) cacheLoginInfo:(id)responseObject {
+    if (responseObject) {
+        
+        
+        NSString* token = [responseObject valueForKey:@"token"];
+        NSMutableDictionary* user = [NSMutableDictionary dictionaryWithDictionary:[responseObject objectForKey:@"user"]];
+
+        NSLog(@"%@", user);
+        
+        NSArray* keys = [user allKeys];
+        for (NSString* key in keys) {
+            id value = [user objectForKey:key];
+            if ([value isKindOfClass:NSNull.class]) {
+                [user setValue:@"-" forKey:key];
+            }
+        }
+        
+        NSLog(@"%@", user);
+        
+        [localCache setValue:token forKey:@"token"];
+        [localCache setValue:user  forKey:@"user"];
+        
+        [[NSNotificationCenter defaultCenter]postNotificationName:@"goMain" object:nil];
+    }
+}
+
+//
+//内存不足
 //
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
